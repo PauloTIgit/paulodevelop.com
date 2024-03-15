@@ -13,5 +13,8 @@
   "bugs": {
     "url": "https://github.com/PauloTIgit/paulodevelop.com/issues"
   },
-  "homepage": "https://github.com/PauloTIgit/paulodevelop.com#readme"
+  "homepage": "https://github.com/PauloTIgit/paulodevelop.com#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
 }
