@@ -1,6 +1,21 @@
-/* Configurações padrões */
-*{
+/** FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/** Configurações padrões */
+* {
     padding: 0;
     margin: 0;
 }
 
+/** Variaveis */
+:root{
+    /** Cores */
+    --cor-01: red;
+    --cor-02: red;
+    --cor-03: red;
+    --cor-04: red;
+    --cor-05: red;
+    --cor-06: red;
+
+    /** */
+}

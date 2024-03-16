@@ -4,52 +4,74 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
+        width: 100%;
         margin: 0;
-        background-color: #f2f2f2;
+        background-color: #e0e0e0;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .texto-info{
+        font-family:'Work Sans', sans-serif;
+        font-weight: 600;
+        font-size: 1.3rem;
+        color: #727272;
+        padding-bottom: 1rem;
+    }
+
+    .loader-container {
+        width: 30%;
+        height: 5px;
+        background-color: #ffffff;
+        border-radius: 2px;
+        overflow: hidden;
     }
 
     .loader {
-        width: 50px;
-        height: 50px;
-        animation: pulse 1s infinite ease-in-out;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        width: 0;
+        height: 100%;
+        background-color: #646470;
+        animation: progress 3s ease forwards;
     }
 
-    @keyframes pulse {
+    @keyframes progress {
         0% {
-            transform: scale(0.8);
-        }
-        50% {
-            transform: scale(1.2);
+            width: 0;
         }
         100% {
-            transform: scale(0.8);
+            width: 100%;
         }
     }
+
 
 </style>
 
-<section class="containerLoader">
-    <div id="loader" class="loader">
-        <img src="imagen/home/coofe.png" alt="Caneca de cafe em formada por {}:">
+<section class="containerLoader" id="containerLoader">
+    <p class="texto-info">Carregando...</p>
+    <div class="loader-container">
+        <div class="loader" id="loader"></div>
     </div>
 </section>
 
 <script>
-        window.addEventListener("load", function() {
-        var loader = document.getElementById("loader");
-        loader.style.display = "block";
-        // Simula um tempo de carregamento
-        // setTimeout(function() {
-        //     loader.style.display = "none";
-        // }, 3000); // Altere o valor do timeout para o tempo de carregamento necessário em milissegundos
+    // Função para ser chamada quando o carregamento da página estiver completo
+    function onPageLoaded() {
+        const containerLoader = document.getElementById('containerLoader');
+        containerLoader.style.display = 'none';
+    }
+
+window.addEventListener('DOMContentLoaded', function () {
+    const loader = document.getElementById('loader');
+    loader.addEventListener('animationend', function () {
+        // Chame a função onPageLoaded quando a animação de carregamento for concluída
+        onPageLoaded();
     });
 
-    window.addEventListener("beforeunload", function() {
-        var loader = document.getElementById("loader");
-        loader.style.display = "block";
-    });
+    // Simular o carregamento completado após um certo tempo
+    setTimeout(function () {
+        loader.style.width = '100%';
+    }, 3000); // Este é o mesmo tempo definido na animação @keyframes
+});
+
 </script>
