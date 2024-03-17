@@ -1,0 +1,31 @@
+.container-home{
+    height: calc(100vh - 105px);
+    background: rgb(200, 136, 233);
+    background: radial-gradient(circle at 105% 13%, rgb(230, 192, 248) 6%, rgb(218, 242, 253) 56%, rgba(255, 255, 255, 1) 137%);
+    background-position: 30% 30%;/* Altere as coordenadas para posicionar o ponto central */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-presentation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60%;
+    width: 72%;
+}
+
+.content-presentation{
+    border: solid 1px #000;
+}
+
+.content-perfil{
+    height: 100%;
+}
+
+.content-perfil img{
+    border-radius: 15px;
+    height: 100%;
+}
+

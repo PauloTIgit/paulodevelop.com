@@ -1,5 +1,5 @@
 <style>
-    .containerLoader {
+    .container-loader {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -20,7 +20,7 @@
         padding-bottom: 1rem;
     }
 
-    .loader-container {
+    .content-loader {
         width: 30%;
         height: 5px;
         background-color: #ffffff;
@@ -32,7 +32,7 @@
         width: 0;
         height: 100%;
         background-color: #646470;
-        animation: progress 3s ease forwards;
+        animation: progress 1.5s ease forwards;
     }
 
     @keyframes progress {
@@ -47,9 +47,9 @@
 
 </style>
 
-<section class="containerLoader" id="containerLoader">
+<section class="container-loader" id="container-loader">
     <p class="texto-info">Carregando...</p>
-    <div class="loader-container">
+    <div class="content-loader">
         <div class="loader" id="loader"></div>
     </div>
 </section>
@@ -57,8 +57,8 @@
 <script>
     // Função para ser chamada quando o carregamento da página estiver completo
     function onPageLoaded() {
-        const containerLoader = document.getElementById('containerLoader');
-        containerLoader.style.display = 'none';
+        const containerloader = document.getElementById('container-loader');
+        containerloader.style.display = 'none';
     }
 
 window.addEventListener('DOMContentLoaded', function () {
@@ -71,7 +71,7 @@ window.addEventListener('DOMContentLoaded', function () {
     // Simular o carregamento completado após um certo tempo
     setTimeout(function () {
         loader.style.width = '100%';
-    }, 3000); // Este é o mesmo tempo definido na animação @keyframes
+    }, 1500); // Este é o mesmo tempo definido na animação @keyframes
 });
 
 </script>
