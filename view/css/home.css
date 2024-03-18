@@ -1,7 +1,7 @@
 .container-home{
-    height: calc(100vh - 105px);
-    background: rgb(200, 136, 233);
-    background: radial-gradient(circle at 105% 13%, rgb(230, 192, 248) 6%, rgb(218, 242, 253) 56%, rgba(255, 255, 255, 1) 137%);
+    height: 100vh;
+    background: var(--cor-pry-100);
+    background: radial-gradient(circle at 105% 13%, var(--cor-pry-100) 6%, var(--cor-seg-100) 56%, #ffffff 137%);
     background-position: 30% 30%;/* Altere as coordenadas para posicionar o ponto central */
     display: flex;
     justify-content: center;
@@ -12,12 +12,110 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 60%;
+    height: 66%;
     width: 72%;
 }
 
 .content-presentation{
-    border: solid 1px #000;
+    width: 53%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 63%;
+}
+
+.text .box{
+    display: block;
+    height: 5px;
+    background: var(--cor-seg-800);
+}
+
+.text .box.cont1{
+    width: 90px;
+}
+
+.text .box.cont2 {
+    width: 120px;
+}
+
+.text .title{
+    font-size: 5rem;
+    font-weight: 500;
+    font-family: var(--font-montserra);
+    color: var(--cor-grafit-800);
+} 
+
+.text .description{
+    font-family: var(--font-montserra);
+    font-size: 1rem;
+    color: var(--cor-grafit-500);
+    font-weight: 500;
+}
+
+.description span{
+    color: var(--cor-grafit-800);
+    font-weight: 600;
+}
+
+.container-button .button{
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #ffffff;
+    background: var(--cor-pry-800);
+    font-family: var(--font-montserra);
+    font-size: 1.2rem;
+    padding: .5rem .6rem;
+}
+
+.container-button .button:hover{
+    background: var(--cor-pry-1000);
+}
+
+.container-statistic{
+    height: calc(100% - 63% - 53px);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.content-statistic{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.item-statistic{
+    background: var(--cor-pry-100);
+    width: calc(99% / 3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+.item-statistic p{
+    text-align: center;
+    font-family: var(--font-montserra);
+    font-weight: 500;
+}
+
+.item-statistic .title{
+    color: var(--cor-grafit-800);
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding-bottom: .5rem;
+}
+
+.item-statistic .description{
+    color: var(--cor-grafit-500);
+    font-size: 1rem;
 }
 
 .content-perfil{

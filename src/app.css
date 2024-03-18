@@ -5,17 +5,29 @@
 * {
     padding: 0;
     margin: 0;
+    caret-color: transparent;
 }
 
 /** Variaveis */
 :root{
     /** Cores */
-    --cor-02: red;
-    --cor-03: red;
+    --cor-pry-100: #f4dfff;
+    --cor-pry-500: #c686fd;
     --cor-pry-800: #A53DFF;
-    --cor-04: red;
-    --cor-05: red;
-    --cor-06: red;
+    --cor-pry-1000: #602e8b;
+    --cor-seg-100: #e1f3fb;
+    --cor-seg-500: #8edbfc;
+    --cor-seg-800: #20b5f5;
+    --cor-seg-1000: #0588c0;
+    --cor-ter-100: #faf7f2;
+    --cor-ter-500: #FFEAC8;
+    --cor-ter-800: #ffcf83;
+    --cor-ter-1000: #faaa2a;
+    --cor-grafit-50: #F0F1F3;
+    --cor-grafit-100: #999999;
+    --cor-grafit-500: #5f5a5a;
+    --cor-grafit-800: #47414d;
+    --cor-grafit-1000: #333036;
 
     --font-montserra: "Montserrat Alternates", sans-serif;
 }

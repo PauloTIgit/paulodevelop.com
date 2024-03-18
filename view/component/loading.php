@@ -1,37 +1,37 @@
 <style>
     .container-loader {
+        position: fixed;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100vh;
         width: 100%;
         margin: 0;
-        background-color: #e0e0e0;
-        position: absolute;
-        display: flex;
-        flex-direction: column;
+        background: var(--cor-seg-100);
+       z-index: 3; 
     }
 
     .texto-info{
         font-family:'Work Sans', sans-serif;
         font-weight: 600;
         font-size: 1.3rem;
-        color: #727272;
+        color: var(--cor-grafit-800);
         padding-bottom: 1rem;
     }
-
+    
     .content-loader {
         width: 30%;
-        height: 5px;
-        background-color: #ffffff;
+        height: 6px;
+        background: var(--cor-grafit-100);
         border-radius: 2px;
         overflow: hidden;
     }
-
+    
     .loader {
         width: 0;
         height: 100%;
-        background-color: #646470;
+        background: var(--cor-pry-800);
         animation: progress 1.5s ease forwards;
     }
 
