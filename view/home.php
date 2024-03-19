@@ -1,7 +1,7 @@
 <!------------------------------------------------ HOME  -->
-<!-- <?php $perfil = 'image/perfil/perfil.png'; ?>
+<?php $perfil = 'image/perfil/perfil.png'; ?>
 <link rel="stylesheet" href="view/css/home.css">
-<section class="container-home" id="home">
+<!-- <section class="container-home" id="home">
     <div class="container-presentation">
         <div class="content-presentation">
             <div class="text">
@@ -43,9 +43,9 @@
 </section> -->
 
 <!------------------------------------------------ ABOUT  -->
-<!-- <?php $about = 'image/perfil/about.jpg'; ?>
+<?php $about = 'image/perfil/about.jpg'; ?>
 <link rel="stylesheet" href="view/css/about.css">
-<section class="container-about" id="about">
+<!-- <section class="container-about" id="about">
     <div class="box-backgound"></div>
     <div class="box-about">
         <div class="content-about">
@@ -80,8 +80,8 @@
 </section> -->
 
 <!------------------------------------------------ Process  -->
-<!-- <link rel="stylesheet" href="view/css/process.css">
-<section class="container-process" id="process">
+<link rel="stylesheet" href="view/css/process.css">
+<!-- <section class="container-process" id="process">
     <div class="work-process">
         <div class="text-process">
             <p class="title-process">Work Process</p>
@@ -122,9 +122,61 @@
 </section> -->
 
 <!------------------------------------------------ PORTFOLIO  -->
-<link rel="stylesheet" href="/view/css/portfolio.css">
+<?php
+    $imagen_portfolio = 'image/portfolio/imagen_portfolio.png';
+?>
+<link rel="stylesheet" href="view/css/portfolio.css">
 <section class="container-portfolio" id="portfolio">
     <div class="content-portfolio">
-        
+        <div class="title-portfolio">
+            <p class="title">Protfólio</p>
+            <p class="description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+        </div>
+        <div class="container-item-portfolio">
+            <div class="box-item-portfolio">
+                <div class="item-portfolio">
+                    <div class="imagen-item-portfolio">
+                        <img src="<?php echo $imagen_portfolio ?>" alt="">
+                    </div>
+                    <div class="container-description-item-portfolio">
+                        <div class="description-item-portfolio">
+                            <span>UI-UX DESIGN</span>
+                            <p class="title-item-portfolio">Product Admin Dashboard</p>
+                            <p>Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.</p>
+                        </div>
+                        <a href="">Case Study <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="item-portfolio">
+                    <div class="imagen-item-portfolio">
+                        <img src="<?php echo $imagen_portfolio ?>" alt="">
+                    </div>
+                    <div class="container-description-item-portfolio">
+                        <div class="description-item-portfolio">
+                            <span>UI-UX DESIGN</span>
+                            <p class="title-item-portfolio">Product Admin Dashboard</p>
+                            <p>Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.</p>
+                        </div>
+                        <a href="">Case Study <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="item-portfolio">
+                    <div class="imagen-item-portfolio">
+                        <img src="<?php echo $imagen_portfolio ?>" alt="">
+                    </div>
+                    <div class="container-description-item-portfolio">
+                        <div class="description-item-portfolio">
+                            <span>UI-UX DESIGN</span>
+                            <p class="title-item-portfolio">Product Admin Dashboard</p>
+                            <p>Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.</p>
+                        </div>
+                        <a href="">Case Study <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- <div class="container-btn-portfolio">
+        <a href="">More Project</a>
+    </div> -->
 </section>
