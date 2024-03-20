@@ -1,7 +1,7 @@
 <!------------------------------------------------ HOME  -->
 <?php $perfil = 'image/perfil/perfil.png'; ?>
 <link rel="stylesheet" href="view/css/home.css">
-<!-- <section class="container-home" id="home">
+<section class="container-home" id="home">
     <div class="container-presentation">
         <div class="content-presentation">
             <div class="text">
@@ -40,12 +40,12 @@
             <img src="<?php echo $perfil?>" alt="" srcset="">
         </div>
     </div>
-</section> -->
+</section>
 
 <!------------------------------------------------ ABOUT  -->
 <?php $about = 'image/perfil/about.jpg'; ?>
 <link rel="stylesheet" href="view/css/about.css">
-<!-- <section class="container-about" id="about">
+<section class="container-about" id="about">
     <div class="box-backgound"></div>
     <div class="box-about">
         <div class="content-about">
@@ -77,11 +77,11 @@
             </div>
         </div>
     </div>
-</section> -->
+</section>
 
 <!------------------------------------------------ Process  -->
 <link rel="stylesheet" href="view/css/process.css">
-<!-- <section class="container-process" id="process">
+<section class="container-process" id="process">
     <div class="work-process">
         <div class="text-process">
             <p class="title-process">Work Process</p>
@@ -119,7 +119,7 @@
             </div>
         </div>
     </div>
-</section> -->
+</section>
 
 <!------------------------------------------------ PORTFOLIO  -->
 <?php
@@ -142,9 +142,9 @@
                         <div class="description-item-portfolio">
                             <span>UI-UX DESIGN</span>
                             <p class="title-item-portfolio">Product Admin Dashboard</p>
-                            <p>Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.</p>
+                            <p class="description-portfolio">Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.</p>
                         </div>
-                        <a href="">Case Study <i class="fa-solid fa-arrow-right"></i></a>
+                        <a class="btn-portfolio" href="#project">Case Study <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="item-portfolio">
@@ -155,9 +155,9 @@
                         <div class="description-item-portfolio">
                             <span>UI-UX DESIGN</span>
                             <p class="title-item-portfolio">Product Admin Dashboard</p>
-                            <p>Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.</p>
+                            <p class="description-portfolio">Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.</p>
                         </div>
-                        <a href="">Case Study <i class="fa-solid fa-arrow-right"></i></a>
+                        <a class="btn-portfolio" href="#project">Case Study <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="item-portfolio">
@@ -168,15 +168,15 @@
                         <div class="description-item-portfolio">
                             <span>UI-UX DESIGN</span>
                             <p class="title-item-portfolio">Product Admin Dashboard</p>
-                            <p>Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.</p>
+                            <p class="description-portfolio">Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.</p>
                         </div>
-                        <a href="">Case Study <i class="fa-solid fa-arrow-right"></i></a>
+                        <a class="btn-portfolio" href="#project">Case Study <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- <div class="container-btn-portfolio">
-        <a href="">More Project</a>
-    </div> -->
+    <div class="container-btn-portfolio">
+        <a href="#more_project">More Project</a>
+    </div>
 </section>
