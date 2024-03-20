@@ -1,7 +1,7 @@
 <!------------------------------------------------ HOME  -->
 <?php $perfil = 'image/perfil/perfil.png'; ?>
 <link rel="stylesheet" href="view/css/home.css">
-<section class="container-home" id="home">
+<!-- <section class="container-home" id="home">
     <div class="container-presentation">
         <div class="content-presentation">
             <div class="text">
@@ -40,12 +40,12 @@
             <img src="<?php echo $perfil?>" alt="" srcset="">
         </div>
     </div>
-</section>
+</section> -->
 
 <!------------------------------------------------ ABOUT  -->
 <?php $about = 'image/perfil/about.jpg'; ?>
 <link rel="stylesheet" href="view/css/about.css">
-<section class="container-about" id="about">
+<!-- <section class="container-about" id="about">
     <div class="box-backgound"></div>
     <div class="box-about">
         <div class="content-about">
@@ -77,11 +77,11 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <!------------------------------------------------ Process  -->
 <link rel="stylesheet" href="view/css/process.css">
-<section class="container-process" id="process">
+<!-- <section class="container-process" id="process">
     <div class="work-process">
         <div class="text-process">
             <p class="title-process">Work Process</p>
@@ -119,14 +119,14 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <!------------------------------------------------ PORTFOLIO  -->
 <?php
     $imagen_portfolio = 'image/portfolio/imagen_portfolio.png';
 ?>
 <link rel="stylesheet" href="view/css/portfolio.css">
-<section class="container-portfolio" id="portfolio">
+<!-- <section class="container-portfolio" id="portfolio">
     <div class="content-portfolio">
         <div class="title-portfolio">
             <p class="title">Protfólio</p>
@@ -179,4 +179,68 @@
     <div class="container-btn-portfolio">
         <a href="#more_project">More Project</a>
     </div>
+</section> -->
+
+<!------------------------------------------------ BLOG  -->
+<link rel="stylesheet" href="view/css/blog.css">
+<section class="container-call-blog" id="blog">
+    <div class="container-call-action">
+        <div class="content-call-action">
+            <div>
+                <p class="title-call-action">Você tem um Projeto? <br> Vamos discutir seu projeto!</p>
+                <p class="description-call-action">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+            </div>
+            <div class="container-btn-call-action">
+                <a class="btn-call-action" href="#call">Vamos trabalhar junto 
+                    <i class="fa-solid fa-arrow-right"></i> </a>
+            </div>
+        </div>
+    </div>
+    <div class="container-blog">
+        <div class="content-blog">
+            <div class="container-text-blog">
+                <p class="title-blog">Blog</p>
+                <p class="description-blog">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium saepe inventore sunt harum aspernatur dignissimos.</p>
+            </div>
+            <div class="container-card-blog">
+                <div class="container-item-card">
+                    <div>
+                        <img src="image/blog/imagen_blog.png" alt="">
+                    </div>
+                    <div>
+                        <p>22 Oct, 2020/246 Comments</p>
+                        <p>Lorem ipsum dolor sit consea. Nulla purus arcu</p>
+                    </div>
+                </div>
+                <div class="container-item-card">
+                    <div>
+                        <img src="image/blog/imagen_blog.png" alt="">
+                    </div>
+                    <div>
+                        <p>22 Oct, 2020/246 Comments</p>
+                        <p>Lorem ipsum dolor sit consea. Nulla purus arcu</p>
+                    </div>
+                </div>
+                <div class="container-item-card">
+                    <div>
+                        <img src="image/blog/imagen_blog.png" alt="">
+                    </div>
+                    <div>
+                        <p>22 Oct, 2020/246 Comments</p>
+                        <p>Lorem ipsum dolor sit consea. Nulla purus arcu</p>
+                    </div>
+                </div>
+                <div class="container-item-card">
+                    <div>
+                        <img src="image/blog/imagen_blog.png" alt="">
+                    </div>
+                    <div>
+                        <p>22 Oct, 2020/246 Comments</p>
+                        <p>Lorem ipsum dolor sit consea. Nulla purus arcu</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+

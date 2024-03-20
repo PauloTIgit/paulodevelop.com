@@ -28,8 +28,8 @@ function RouteWeb($web) {
     }
 
     include'view/component/header.php';
-    include'view/component/loading.php';
-    include'view/component/menu.php';
+    // include'view/component/loading.php';
+    // include'view/component/menu.php';
     include'view/'    .$web.    '.php';
     include'view/component/footer.php';
 }
