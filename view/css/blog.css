@@ -63,7 +63,7 @@
 
 
 .content-blog{
-    height: 80%;
+    height: 84%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -72,27 +72,61 @@
 }
 
 .container-text-blog{
+    height: 34%;
     width: 30%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .container-text-blog .title-blog{
-    font-family: var(--font-montserra);
-    font-size: 2rem;
-    font-weight: 700;
+    height: 50%;
     color: var(--cor-grafit-800);
-    padding-bottom: 2rem;
+    font-family: var(--font-montserra);
+    font-weight: 700;
+    font-size: 3rem;
 }
 
 .container-text-blog .description-blog{
+    height: 50%;
+    color: var(--cor-grafit-100);
     font-family: var(--font-montserra);
     font-weight: 500;
-    color: var(--cor-grafit-100);
 }
-
 
 .container-card-blog{
     display: flex;
     flex-direction: row;
     width: auto;
 }
+
+.container-card-blog .container-item-card{
+    width: 17rem;
+    margin: 0 1rem 0 1rem;
+    border-radius: 6px;
+    box-shadow: 1px 1px 20px #e7d6d6;
+    overflow: hidden;
+}
+
+.container-item-card .item-card-imagen img{
+    width: 100%;
+}
+
+.container-item-card .item-card-description{
+    font-family: var(--font-montserra);
+    font-size: 0.99rem;
+    margin: 24px;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container-item-card .item-card-description .coment-data {
+    font-size: .8rem;
+    color: var(--cor-grafit-100);
+}
+
+
+

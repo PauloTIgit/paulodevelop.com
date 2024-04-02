@@ -79,7 +79,7 @@
     </div>
 </section> -->
 
-<!------------------------------------------------ Process  -->
+<!------------------------------------------------ PROCESS  -->
 <link rel="stylesheet" href="view/css/process.css">
 <!-- <section class="container-process" id="process">
     <div class="work-process">
@@ -183,7 +183,7 @@
 
 <!------------------------------------------------ BLOG  -->
 <link rel="stylesheet" href="view/css/blog.css">
-<section class="container-call-blog" id="blog">
+<!-- <section class="container-call-blog" id="blog">
     <div class="container-call-action">
         <div class="content-call-action">
             <div>
@@ -202,45 +202,63 @@
                 <p class="title-blog">Blog</p>
                 <p class="description-blog">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium saepe inventore sunt harum aspernatur dignissimos.</p>
             </div>
-            <div class="container-card-blog">
+            <div class="container-card-blog slideshow-container">
                 <div class="container-item-card">
-                    <div>
+                    <div class="item-card-imagen">
                         <img src="image/blog/imagen_blog.png" alt="">
                     </div>
-                    <div>
-                        <p>22 Oct, 2020/246 Comments</p>
-                        <p>Lorem ipsum dolor sit consea. Nulla purus arcu</p>
+                    <div class="item-card-description">
+                        <p class="coment-data">22 Oct, 2020/246 Comments</p>
+                        <p class="coment-text">Lorem ipsum dolor sit consea. Nulla purus arcu</p>
                     </div>
                 </div>
                 <div class="container-item-card">
-                    <div>
+                    <div class="item-card-imagen">
                         <img src="image/blog/imagen_blog.png" alt="">
                     </div>
-                    <div>
-                        <p>22 Oct, 2020/246 Comments</p>
-                        <p>Lorem ipsum dolor sit consea. Nulla purus arcu</p>
+                    <div class="item-card-description">
+                        <p class="coment-data">22 Oct, 2020/246 Comments</p>
+                        <p class="coment-text">Lorem dfsdf ipsum dolor sit consea. Nulla purus arcu</p>
+                    </div>
+                </div>
+                <div class="container-item-card ">
+                    <div class="item-card-imagen">
+                        <img src="image/blog/imagen_blog.png" alt="">
+                    </div>
+                    <div class="item-card-description">
+                        <p class="coment-data">22 Oct, 2020/246 Comments</p>
+                        <p class="coment-text">Lorem ipsum dolor sit consea. Nulla purus arcu</p>
                     </div>
                 </div>
                 <div class="container-item-card">
-                    <div>
+                    <div class="item-card-imagen">
                         <img src="image/blog/imagen_blog.png" alt="">
                     </div>
-                    <div>
-                        <p>22 Oct, 2020/246 Comments</p>
-                        <p>Lorem ipsum dolor sit consea. Nulla purus arcu</p>
-                    </div>
-                </div>
-                <div class="container-item-card">
-                    <div>
-                        <img src="image/blog/imagen_blog.png" alt="">
-                    </div>
-                    <div>
-                        <p>22 Oct, 2020/246 Comments</p>
-                        <p>Lorem ipsum dolor sit consea. Nulla purus arcu</p>
+                    <div class="item-card-description">
+                        <p class="coment-data">22 Oct, 2020/246 Comments</p>
+                        <p class="coment-text">Lorem ipsum dolor sit consea. Nulla purus arcu</p>
                     </div>
                 </div>
             </div>
+
+        </div>
+    </div>
+</section> -->
+
+<!------------------------------------------------ SKILLS -->
+<link rel="stylesheet" href="view/css/skills.css">
+<section class="container-skills">
+    <div class="content-skills">
+        <div class="colun-text-description">
+            <p class="title-text">O que eu faço?</p>
+            <div>
+                <p class="description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor harum fugiat dignissimos tenetur. Possimus, aliquid quis voluptatum sint at inventore itaque.</p>
+                <p class="description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, officia animi.</p>
+            </div>
+            <a class="btn-text" href="#">Diga olá!</a>
+        </div>
+        <div class="colun-skills">
+
         </div>
     </div>
 </section>
-

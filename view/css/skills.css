@@ -1,0 +1,11 @@
+.container-skills{
+    height: 100vh;
+    background: #F0F1F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-skills{
+    background: #ffffff;
+}
