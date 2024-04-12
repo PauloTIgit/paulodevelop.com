@@ -17,3 +17,5 @@ document.querySelectorAll('nav a').forEach(link => {
         scrollToSection(targetId); // Rola suavemente até a seção alvo
     });
 });
+
+

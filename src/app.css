@@ -8,6 +8,19 @@
     caret-color: transparent;
 }
 
+body{
+    position: relative;
+}
+#menu-mobile{
+    display: none;
+}
+#view{
+    padding-top: 105px;
+}
+.coockie{
+    display: none;
+}
+
 /** Variaveis */
 :root{
     /** Cores */
@@ -23,6 +36,7 @@
     --cor-ter-500: #FFEAC8;
     --cor-ter-800: #ffcf83;
     --cor-ter-1000: #faaa2a;
+    --cor-qua-800: #2B384C;
     --cor-grafit-50: #F0F1F3;
     --cor-grafit-70: #d6d6d6;
     --cor-grafit-100: #999999;

@@ -47,10 +47,10 @@
 
     .box-item-portfolio{
         width: 65%;
-        height: 100%;
+        height: auto;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         align-content: space-between;
         padding: 2rem 0;
     }
@@ -75,9 +75,10 @@
     }
 
     .container-description-item-portfolio{
-        height: 33%;
+        height: auto;
         padding: 1rem;
         font-family: var(--font-montserra);
+        display: grid;
     }
 
     .description-item-portfolio{
@@ -101,6 +102,12 @@
     .description-item-portfolio .description-portfolio{
         font-size: 1rem;
         color: var(--cor-grafit-500);
+    }
+
+    .container-description-item-portfolio .btn-item-portfolio{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .container-description-item-portfolio .btn-portfolio{

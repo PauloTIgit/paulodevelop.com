@@ -1,8 +1,8 @@
 .container-home{
     height: 100vh;
-    background: var(--cor-pry-100);
+    background: var(--cor-seg-100);
     background: radial-gradient(circle at 105% 13%, var(--cor-pry-100) 6%, var(--cor-seg-100) 56%, #ffffff 137%);
-    background-position: 30% 30%;/* Altere as coordenadas para posicionar o ponto central */
+    background-position: 30% 30%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,10 +38,15 @@
 
 .text .box.cont1{
     width: 90px;
+    margin-bottom: 2px;
 }
 
 .text .box.cont2 {
     width: 120px;
+}
+.text .box span{
+    display: block;
+    height: 5px;
 }
 
 .text .title{
@@ -49,6 +54,7 @@
     font-weight: 500;
     font-family: var(--font-montserra);
     color: var(--cor-grafit-800);
+    margin-bottom: 2rem;
 } 
 
 .text .description{
@@ -64,18 +70,26 @@
 }
 
 .container-button .button{
+    display: block;
+    width: 7rem;
     border: none;
     cursor: pointer;
+    border: solid 1px var(--cor-pry-800);
     border-radius: 4px;
     color: #ffffff;
     background: var(--cor-pry-800);
     font-family: var(--font-montserra);
     font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 2rem;
     padding: .5rem .6rem;
+    text-decoration: none;
 }
 
 .container-button .button:hover{
-    background: var(--cor-pry-1000);
+    background: none;
+    color: var(--cor-pry-800);
+
 }
 
 .container-statistic{

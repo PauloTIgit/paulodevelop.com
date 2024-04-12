@@ -1,0 +1,9 @@
+<?php
+
+class Exemplo
+{
+    /////////////////////// fuctions GET
+    /////////////////////// fuctions SET
+    /////////////////////// method = fuctions
+    
+}

@@ -1,25 +1,18 @@
 .container-about{
     display: grid;
-    height: 100vh;
-    background: var(--cor-grafit-50);
-}
-
-.box-backgound {
-    display: block;
-    height: 80%;
-    background: radial-gradient(circle at 115% 72%, var(--cor-ter-800) 6%, var(--cor-pry-100) 6%, var(--cor-seg-100) 56%, #ffffff 137%);
-    padding-top: 5rem;
+    height: 90%;
+    background: var(--cor-seg-100);
+    background: radial-gradient(circle at 105% 13%, #e6edfc 6%, #e2f4fb 56%, #ffffff 137%);
 }
 
 .box-about{
-    padding-top: 5rem;
-    position: absolute;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 6rem;
 }
 
 .content-about{

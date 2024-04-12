@@ -1,0 +1,322 @@
+
+
+/* Estilos para telas menores que 425px 824px (celulares) */
+@media only screen and (max-width: 425px){
+    /* Menu Mobile */
+        #menu-desktop {
+            display: none;
+        }
+        .navbar-menu-mobile{
+            width: 425px;
+            bottom: 0;
+        }
+
+    /* HOME */
+        .container-presentation{
+            flex-direction: column-reverse;
+            width: 90%;
+            height: 80%;
+        }
+        .content-perfil{
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            /* display: none; */
+            display: flex;
+            justify-content: center;
+        }
+        .content-perfil img {
+            position: absolute;
+            height: 100%;
+        }
+        .text .title {
+            font-size: 1.6rem;
+            text-align: center;
+        }
+        .content-presentation{
+            width: 100%;
+            z-index: 2;
+        }
+        .container-statistic{
+            margin-top: 2rem;
+        }
+        
+
+    /* ABOUT */
+        .container-about{
+            background: radial-gradient(circle at 105% 13%, #eaf4f9 6%, #f1f9fd 56%, #ffffff 137%);
+            height: 90%;
+        }
+        .content-about{
+            width: 80%;
+            padding: 2rem;
+            flex-direction: column;
+        }
+        .box-about{
+            margin-top: 1rem;
+        }
+        .about-picture-social-media{
+            width: 50%;
+            display: flex;
+        }
+        .about-picture-social-media img{
+            height: auto;
+            width: 100%;
+            margin-right: 1rem;
+        }
+        .content-social-media{
+            display: flex;
+            flex-direction: column;
+        }
+        .content-social-media i{
+            font-size: 25px;
+            padding: 5px;
+        }
+        .container-bio{
+            margin-top: 1.5rem;
+            width: 100%;
+        }
+        .text-bio .title{
+            font-size: 38px;
+        }
+        .text-bio .description{
+            font-size: 14.5px;
+        }
+        .text-bio .btn{
+            display: flex;
+            justify-content: space-between;
+        }
+    /* PROCESS */
+        .container-process{
+            height: auto;
+        }
+        .work-process{
+            width: 90%;
+            flex-direction: column;
+        }   
+        .title-process{
+            font-size: 2rem;
+        }
+        .description-process{
+            font-size: 1rem;
+        }
+        .box-process{
+            padding: 0;
+            width: auto;
+            flex-direction: column;
+        }
+
+        .box-process .item-process:nth-child(1) {
+            padding-bottom: 0;
+        }
+        
+        .box-process .item-process:nth-child(2){
+            padding-top: 0;
+        }
+
+        .item-process{
+            margin: 1rem 0;
+            padding: 0 1rem 0 0;
+        }
+
+        .container-item{
+            width: 100%;
+            height: auto;
+            padding: 5px;
+        }
+        .container-item i{
+            font-size: 2rem;
+            padding: 5px;
+        }
+        .container-item .title-item{
+            font-size: 1.2rem;
+            padding: 5px;
+        }
+        .container-item .description-item{
+            font-size: 1rem;
+            padding: 0;
+        }
+        
+    /* PORTFOLIO */
+        .container-portfolio{
+            padding-top: 0;
+            overflow: hidden
+        }
+        .content-portfolio{
+            margin-bottom: 2rem;
+        }
+        .box-item-portfolio{
+            height: auto;
+            width: 85%;
+        }
+        .title-portfolio .description{
+            width: auto;
+        }
+        .container-description-item-portfolio{
+            padding: .5rem ;
+        }
+        .description-item-portfolio{
+            height: auto;
+            padding-bottom: 0;
+        }
+        .container-description-item-portfolio .btn-item-portfolio{
+            flex-direction: column;
+        }
+        .container-description-item-portfolio .btn-portfolio{
+            margin-top: 1rem;
+            width: 60%;
+            display: block;
+        }
+    /* CALL */
+        .content-call-action{
+            width: 90%;
+        }
+        .content-call-action .description-call-action{
+            color: var(--cor-grafit-50);
+        }
+        .container-call-action .btn-call-action{
+            font-family: 800;
+            font-size: .6rem;
+        }
+    
+    /* SERVICES  */
+        .container-services{
+            justify-content: center;
+            padding: 2rem 1rem;
+            height: 150%;
+        }
+        .content-services{
+            height: 100%;
+            flex-direction: column;
+            padding: 2rem 0 1rem 0;
+        }
+        .container-services .btn-services{
+            display: block;
+            width: 100%;
+            height: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2.5rem;
+        }
+        .colun-text-description .title-text{
+            font-size: 2rem;
+        }
+        .colun-text-description .description-text{
+            font-size: 1rem;
+        }
+        .container-item-card-services .title-services{
+            font-size: 1.2rem;
+        }
+        .container-item-card-services .description-services{
+            font-size: .8rem;
+        }
+        .container-item-card-services{
+            padding: 5px;
+        }
+        .container-card-services{
+            width: auto;
+            margin: 1rem 0;
+        }
+        .colun-text-description{
+            width: auto;
+        }
+        .container-item-card-services#car-services-seg{
+            margin: 1rem 0;
+        }
+        
+    
+    /* CONTACT */
+        .container-contact{
+            margin-top: 2.5rem;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 4rem ;
+        }
+        .container-contact .content-contact{
+            width: 90%;
+            flex-direction: column;
+            height: auto;
+            padding: 1rem;
+            margin: 0;
+        }
+        .content-contact .container-my-information{
+            width: 100%;
+            padding: 1rem;
+        }
+        .container-my-information .text-information .title-information{
+            font-size: 2rem;
+        }
+        .item-card-my-information .card-description{
+            font-size: 1.2rem;
+            color: var(--cor-grafit-70);
+        }
+
+        .card-description p:nth-child(1),
+        .card-description p:nth-child(2){
+            display: none;
+        }
+
+        
+        .container-form-contact{
+            width: 90%;
+        }
+        
+        .container-form-contact .content-form-contact .box-form-contact{
+            flex-direction: column;
+        }
+    /* FOOTER */
+        .container-footer{
+            height: 50%;
+        }
+        .container-footer .content-footer{
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: space-between;
+        }
+        .container-card{
+            flex-direction: row;
+            height: auto;
+            width: auto;
+        }
+        .logo-footer{
+            width: 100%;
+        }
+        .copyright-footer{
+            width: 100%;
+        }
+        .item-card-my-information .card-icon{
+            margin-right: 0;
+        }
+        .links-footer{
+            display: none;
+        }
+}
+
+/* Estilos para telas menores que 768px 824px (celulares) */
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+    /* Menu Mobile */
+        #menu-desktop{
+            display: none;
+            bottom: 92rem;
+        }
+    /* HOME */
+        .content-perfil img {
+            /* height: 40%; */
+        }
+        .text .title{
+            font-size: 18px;
+        }
+}
+
+/* Estilos para telas entre 768px e 1023px (tablets) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/* Estilos para telas maiores que 1024px (desktops) */
+@media only screen and (min-width: 1024px) {
+
+}
