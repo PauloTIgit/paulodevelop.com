@@ -77,6 +77,16 @@ class Viewer
             $this->loader = $loader;
         }
         public function setViewerMutant($viewerMutant){
+            $string = '';
+            foreach ($viewerMutant as $key => $value) {
+                if (is_array($value)) {
+                    $string .= "$key: " . implode(", ", $value) . ", ";
+                } else {
+                    $string .= "$key: $value, ";
+                }
+            }
+
+            $viewerMutant = rtrim($string, ", ");
             $this->viewerMutant = $viewerMutant;
         }
         public function setPageDefoult($pageDefoult)
@@ -104,7 +114,7 @@ class Viewer
                 $this->viewerWeb();
             }
         }
-        public function viewerConfiguratrion($header,$callback,$footer,$loader,$pageDefoult)
+        public function viewerConfiguratrion($header,$callback,$footer,$loader,$pageDefoult,$Mutant)
         {
             $this->setLoader($loader);
             $this->setCallback($callback);
@@ -112,15 +122,35 @@ class Viewer
             $this->setHeader($header);
             $this->setFooter($footer);
             $this->viewerScreen();
+            $this->setViewerMutant($Mutant);
         }
-        public function viewerMutant($viewerMutant){
-            $result = 'mutant/'.$viewerMutant.'.View.php';
-            // if($condition){
-            // }
+        public function viewerMutant(){
+            $Mutant = $this->getViewerMutant();
+            $string = "theMutantView: 1, darkMode: mutantVewer: component/darkMode";
+            $parts = explode(", ", $string);// Divide a string
+            $reversedArray = [];
+            foreach ($parts as $part) {
+                $pair = explode(": ", $part, 2);// Divide cada parte em chave
+                if (count($pair) === 2) {
+                    $key = trim($pair[0]);// Remove espaços em branco
+                    $value = trim($pair[1]);
+                    if (is_numeric($value)) {
+                        $value = (int)$value;// Verifica se o valor é numérico e converte-o se necessário
+                    }
+                    $reversedArray[$key] = $value;// Adiciona o par chave-valor ao array resultante
+                }// Verifica se o par chave-valor está no formato correto
+            }
+            print_r($reversedArray);
+            die();
+            if ($Mutant['theMutantView']) {
+                $countMutant = count($Mutant);
+                $Mutant = $countMutant;
+                $result = $Mutant;
+            }
             return $result;
         }
         public function viewerWeb() {
-        // Page Defout 
+        // Page Defouts
             $header = $this->getHeader().'.View.php';
             $view = $this->getVeiw().'.View.php';
             $footer = $this->getFooter().'.View.php';
@@ -128,17 +158,26 @@ class Viewer
             $maintenance = 'component/maintenance'.'.View.php';
             $Controller = new Controller;
             $controllerConfigurationMaintenance = $Controller->ConfigurationViewMaintenance();;
-        // Page Mutant
-            $menuDesktop = $this->viewerMutant('menuDesktop');
-            $menuMobile = $this->viewerMutant('menuMobile');
+        // Pages Mutants
+            $Mutant = $this->viewerMutant();
 
+        // Pages Sinkers
+            $menuDesktop = 'component/menuDesktop';
+            $menuMobile = 'component/menuMobile';
+
+            
             if($controllerConfigurationMaintenance == true){
+                include 'view/'.$header;
                 include 'view/'.$maintenance;
                 die();
             }
+            die();
             include 'view/'.$loader;
             include 'view/'.$header;
             include 'view/'.$menuDesktop;
+            // for ($i=0; $i <  ; $i++) { 
+                
+            // }
             include 'view/'.$view;
             include 'view/'.$menuMobile;
             include 'view/'.$footer;

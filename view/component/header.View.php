@@ -4,7 +4,6 @@
         <title>Paulo Ferreira</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
         <!-------------------------- fav icon -------------------------->
             <link rel="icon" type="image/png" href="image/icon/favicon/android-chrome-512x512.png" sizes="512x512">
             <link rel="icon" type="image/png" href="image/icon/favicon/android-chrome-192x192.png" sizes="192x192">

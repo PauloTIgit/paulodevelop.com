@@ -11,6 +11,7 @@
         background: #ffff;
         z-index: 3; 
         overflow: hidden;
+        background: #ffff;
     }
 
     .texto-info{
@@ -40,6 +41,14 @@
         background-position: center;
     }
 
+    @media (prefers-color-scheme: dark){
+        body{
+            background: #ffff;
+        }
+        .container-loader{
+            background: #ffff;
+        }
+    }
 
 </style>
 <?php
@@ -48,7 +57,7 @@
     $maintenance = $imagens['maintenance'];
 ?>
 <section class="container-loader" id="container-loader">
-    <p class="texto-info">MAINTENANCE</p>
+    <p class="texto-info">Maintenance</p>
     <div class="content-loader">
         <img src="<?php echo $maintenance; ?>" alt="">
     </div>

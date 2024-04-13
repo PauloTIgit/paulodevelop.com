@@ -2,47 +2,46 @@
     @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /** Configurações padrões */
-* {
-    padding: 0;
-    margin: 0;
-    caret-color: transparent;
-}
-
-body{
-    position: relative;
-}
-#menu-mobile{
-    display: none;
-}
-#view{
-    padding-top: 105px;
-}
-.coockie{
-    display: none;
-}
+    * {
+        padding: 0;
+        margin: 0;
+        caret-color: transparent;
+    }
+    body{
+        position: relative;
+    }
+    #menu-mobile{
+        display: none;
+    }
+    #view{
+        padding-top: 105px;
+    }
+    .coockie{
+        display: none;
+    }
 
 /** Variaveis */
-:root{
-    /** Cores */
-    --cor-pry-100: #f4dfff;
-    --cor-pry-500: #c686fd;
-    --cor-pry-800: #A53DFF;
-    --cor-pry-1000: #602e8b;
-    --cor-seg-100: #e1f3fb;
-    --cor-seg-500: #8edbfc;
-    --cor-seg-800: #20b5f5;
-    --cor-seg-1000: #0588c0;
-    --cor-ter-100: #faf7f2;
-    --cor-ter-500: #FFEAC8;
-    --cor-ter-800: #ffcf83;
-    --cor-ter-1000: #faaa2a;
-    --cor-qua-800: #2B384C;
-    --cor-grafit-50: #F0F1F3;
-    --cor-grafit-70: #d6d6d6;
-    --cor-grafit-100: #999999;
-    --cor-grafit-500: #5f5a5a;
-    --cor-grafit-800: #47414d;
-    --cor-grafit-1000: #333036;
-
-    --font-montserra: "Montserrat Alternates", sans-serif;
-}
+    :root{
+        /** Cores */
+            --cor-pry-100: #f4dfff;
+            --cor-pry-500: #c686fd;
+            --cor-pry-800: #A53DFF;
+            --cor-pry-1000: #602e8b;
+            --cor-seg-100: #e1f3fb;
+            --cor-seg-500: #8edbfc;
+            --cor-seg-800: #20b5f5;
+            --cor-seg-1000: #0588c0;
+            --cor-ter-100: #faf7f2;
+            --cor-ter-500: #FFEAC8;
+            --cor-ter-800: #ffcf83;
+            --cor-ter-1000: #faaa2a;
+            --cor-qua-800: #2B384C;
+            --cor-grafit-50: #F0F1F3;
+            --cor-grafit-70: #d6d6d6;
+            --cor-grafit-100: #999999;
+            --cor-grafit-500: #5f5a5a;
+            --cor-grafit-800: #47414d;
+            --cor-grafit-1000: #333036;
+        /* Fonte */
+            --font-montserra: "Montserrat Alternates", sans-serif;
+    }

@@ -1,5 +1,6 @@
 <!------------------------------------------------ SETTINGS  -->
     <?php
+        
         $Controller = new Controller;
         $imagens = $Controller->ConfigurationHomeImage();
 
