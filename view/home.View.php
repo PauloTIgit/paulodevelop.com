@@ -2,7 +2,7 @@
     <?php
         
         $Controller = new Controller;
-        $imagens = $Controller->ConfigurationHomeImage();
+        $imagens = $Controller->settingImage();
 
         $perfil = $imagens['perfil'];
         $about = $imagens['about'];

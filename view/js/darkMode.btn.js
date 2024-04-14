@@ -50,7 +50,7 @@ function activatedNight() {
     btnMode.classList.add('night');
     iconMode.classList.add('fa');
     iconMode.classList.add('fa-sun-o');
-    // view.classList.add('dark-mode');
+    view.classList.add('dark-mode');
     // localStorage.setItem('darkMode', 'true');
 }
 
@@ -58,7 +58,7 @@ function activatedMorning() {
     btnMode.classList.add('morning');
     iconMode.classList.add('fa');
     iconMode.classList.add('fa-moon-o');
-    // view.classList.remove('dark-mode');
+    view.classList.remove('dark-mode');
     // localStorage.removeItem('darkMode');
 
 }

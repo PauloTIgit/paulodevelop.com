@@ -24,18 +24,26 @@
  *  http://localhost:1456 pronto agora só correr pro abraço.
  * 
  */
-
-
-date_default_timezone_set('America/Sao_Paulo');
     include 'autoload.Class.php';
     
-    // Objeto para configu
-    // $ObjViewer = new Viewer('header','home','footer','404/404','loader');
-    $Controller = new Controller();
-    $Controller->Viewer();
+    // Variaveis de configuração para o projeto!
+    $server = '192.168.1.2';
+    $port = '1456';
+    $pageMaintenance = false;
+    $callback = 'error/404';
+    $header = 'component/header';
+    $footer = 'component/footer';
+    $loader = 'component/loader';
+    $pageDefoult = 'home';
 
-    
-    
-    
-    
-    
+    $Controller = new Controller;
+    $Controller->settingPages(
+        $callback,
+        $header,
+        $footer,
+        $loader,
+        $pageDefoult
+    );
+    $Controller->settingServer($server,$port,$pageMaintenance);
+    $cleanCockiesServer = $Controller->cleanCockiesServer();
+    $Controller->Viewer();

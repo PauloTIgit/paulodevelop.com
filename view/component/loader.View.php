@@ -101,7 +101,7 @@
 </style>
 <?php
     $Controller = new Controller;
-    $imagens = $Controller->ConfigurationHomeImage();
+    $imagens = $Controller->settingImage();
     $loading = $imagens['loading'];
 ?>
 

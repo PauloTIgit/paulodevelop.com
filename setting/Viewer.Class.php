@@ -22,9 +22,8 @@
  * 
  * */
 
-class Viewer
+class Viewer extends Controller
 {
-    private $header;
     private $veiw;
     private $callback;
     private $footer;
@@ -32,49 +31,17 @@ class Viewer
     private $mutant;
     private $pageDefoult;
     /////////////////////// FUNCTION GET
-        private function getHeader(){
-            return $this->header;
-        }
         private function getVeiw()
         {
             return $this->veiw;
         }
-        private function getCallback()
-        {
-            return $this->callback;
-        }
-        private function getFooter(){
-            return $this->footer;
-        }
-        private function getLoader(){
-            return $this->loader;
-        }
         private function getMutant() {
             return $this->mutant;
         }
-        private  function getPageDefoult()
-        {
-            return $this->pageDefoult;
-        }
     /////////////////////// FUNCTION SET
-        private function setHeader($header)
-        {
-            $this->header = $header;
-        }
         private function setVeiw($veiw)
         {
             $this->veiw = $veiw;
-        }
-        private function setCallback($callback)
-        {
-            $this->callback = $callback;
-        }
-        private function setFooter($footer)
-        {
-            $this->footer = $footer;
-        }
-        private function setLoader($loader){
-            $this->loader = $loader;
         }
         private function setMutant($mutant){
             $string = '';
@@ -93,25 +60,15 @@ class Viewer
             }
             $this->mutant = $mutant;
         }
-        private function setPageDefoult($pageDefoult)
-        {
-            $this->pageDefoult = $pageDefoult;
-        }
     /////////////////////// METHOD = FUNCTION
         public function viewerScreen(){
             if (strpos($_SERVER["REQUEST_URI"], '?') !== false){
                 $param_parts = explode('=', explode('?', $_SERVER["REQUEST_URI"])[1]);
                 $callPage = $param_parts[0];// Atribuir o valor da chamada a page
                 $page = $param_parts[1];// Atribui o valor da page
-                if(file_exists('view/'.$callPage."/".$page.".View.php")){
-                    $view = $this->setVeiw($callPage.'/'.$page);
-                    $this->setCallback('404/404');
-                    $this->viewerWeb();
-                }else
-                {
-                    echo 'Não existe pagina em view/'.$callPage.'/'.$page.'.View.php';
-                }
-                
+                $this->setVeiw($callPage.'/'.$page);
+                $this->setCallback('404/404');
+                $this->viewerWeb();   
             }
             if(strpos($_SERVER['REQUEST_URI'], '?') == false){
                 $this->setVeiw($this->getPageDefoult());
@@ -164,16 +121,14 @@ class Viewer
                 $view = $this->getVeiw().'.View.php';
                 $footer = $this->getFooter().'.View.php';
                 $loader = $this->getLoader().'.View.php';
-                $maintenance = 'component/maintenance'.'.View.php';
-                $Controller = new Controller;
-                $controllerConfigurationMaintenance = $Controller->ConfigurationViewMaintenance();;
+                $maintenance = $this->settingMaintenance();
             // Pages Mutants
                 $mutant = $this->viewerMutant();
             // Pages Sinkers
                 $menuDesktop = 'component/menuDesktop.View.php';
                 $menuMobile = 'component/menuMobile.View.php';
                 
-                if($controllerConfigurationMaintenance == true){
+                if($maintenance == true){
                     include 'view/'.$header;
                     include 'view/'.$maintenance;
                     die();
@@ -181,6 +136,9 @@ class Viewer
                 include 'view/'.$loader;
                 include 'view/'.$header;
                 include 'view/'.$menuDesktop;
+                if(!file_exists('view/'.$view)){
+                    $veiw = getCallback();
+                }
                 include 'view/'.$view;
                 if(is_array($mutant)){
                     $arrayMutant = count($mutant);
@@ -191,7 +149,7 @@ class Viewer
                         }else{
                             echo " 
                                 <section class='pfWeb-erro' id='view'>
-                                    <p class='infErro'></p>
+                                    <p class='infErro500'></p>
                                     <p>O Visualizador <span>".$mutant[$i]."'</span>, não foi encontrado na <span>./view/<span>!</p>
                                 </section>
                             ";

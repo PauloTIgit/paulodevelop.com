@@ -53,7 +53,7 @@
 </style>
 <?php
     $Controller = new Controller;
-    $imagens = $Controller->ConfigurationHomeImage();
+    $imagens = $Controller->settingImage();
     $maintenance = $imagens['maintenance'];
 ?>
 <section class="container-loader" id="container-loader">
