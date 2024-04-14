@@ -7,6 +7,9 @@
         margin: 0;
         caret-color: transparent;
     }
+    p,h1,h2,h3,h4,h5,h6{
+        font-family: var(--font-montserra), sans-serif;
+    }
     body{
         position: relative;
     }
@@ -22,26 +25,49 @@
 
 /** Variaveis */
     :root{
-        /** Cores */
-            --cor-pry-100: #f4dfff;
-            --cor-pry-500: #c686fd;
-            --cor-pry-800: #A53DFF;
-            --cor-pry-1000: #602e8b;
-            --cor-seg-100: #e1f3fb;
-            --cor-seg-500: #8edbfc;
-            --cor-seg-800: #20b5f5;
-            --cor-seg-1000: #0588c0;
-            --cor-ter-100: #faf7f2;
-            --cor-ter-500: #FFEAC8;
-            --cor-ter-800: #ffcf83;
-            --cor-ter-1000: #faaa2a;
-            --cor-qua-800: #2B384C;
-            --cor-grafit-50: #F0F1F3;
-            --cor-grafit-70: #d6d6d6;
-            --cor-grafit-100: #999999;
-            --cor-grafit-500: #5f5a5a;
-            --cor-grafit-800: #47414d;
-            --cor-grafit-1000: #333036;
+        /** Cores whiteMode */
+        --cor-pry-100: #f4dfff;
+        --cor-pry-500: #c686fd;
+        --cor-pry-800: #A53DFF;
+        --cor-pry-1000: #602e8b;
+        --cor-seg-100: #e1f3fb;
+        --cor-seg-500: #8edbfc;
+        --cor-seg-800: #20b5f5;
+        --cor-seg-1000: #0588c0;
+        --cor-ter-100: #faf7f2;
+        --cor-ter-500: #FFEAC8;
+        --cor-ter-800: #ffcf83;
+        --cor-ter-1000: #faaa2a;
+        --cor-qua-800: #2B384C;
+        --cor-grafit-50: #F0F1F3;
+        --cor-grafit-70: #d6d6d6;
+        --cor-grafit-100: #999999;
+        --cor-grafit-500: #5f5a5a;
+        --cor-grafit-800: #47414d;
+        --cor-grafit-1000: #333036;
+        --white-mode-1000: #fffeff;
+
+        /** Cores darkMode*/
+        --darkMode-pry-100: #f4dfff;
+        --darkMode-pry-500: #c686fd;
+        --darkMode-pry-800: #A53DFF;
+        --darkMode-pry-1000: #602e8b;
+        --darkMode-seg-100: #e1f3fb;
+        --darkMode-seg-500: #8edbfc;
+        --darkMode-seg-800: #20b5f5;
+        --darkMode-seg-1000: #0588c0;
+        --darkMode-ter-100: #faf7f2;
+        --darkMode-ter-500: #FFEAC8;
+        --darkMode-ter-800: #ffcf83;
+        --darkMode-ter-1000: #faaa2a;
+        --darkMode-qua-800: #2B384C;
+        --darkMode-grafit-50: #F0F1F3;
+        --darkMode-grafit-70: #d6d6d6;
+        --darkMode-grafit-100: #999999;
+        --darkMode-grafit-500: #5f5a5a;
+        --darkMode-grafit-800: #47414d;
+        --darkMode-grafit-1000: #1c1c1c;
+        --dark-mode-1000: #1c1c1c;
         /* Fonte */
             --font-montserra: "Montserrat Alternates", sans-serif;
     }

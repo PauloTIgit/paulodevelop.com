@@ -1,0 +1,36 @@
+{
+  "short_name": "PauloDevelop",
+  "name": "Paulo Ferreira Soluções Tecnológicas",
+  "icons": [
+    {
+      "src": "/image/icon/favicon/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/image/icon/favicon/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#f4dfff",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#A53DFF",
+  "description": "Soluções tecnológicas personalizadas para empresas e indivíduos. Desenvolvimento de software, consultoria em TI e muito mais.",
+  "screenshots": [
+    {
+      "src": "/image/data/screenshot1.png",
+      "type": "image/png",
+      "sizes": "540x720",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/image/data/screenshot2.jpg",
+      "type": "image/jpeg",
+      "sizes": "720x540",
+      "form_factor": "wide"
+    }
+  ]
+}

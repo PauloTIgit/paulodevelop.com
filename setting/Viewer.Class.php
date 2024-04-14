@@ -24,72 +24,76 @@
 
 class Viewer
 {
-    public $header;
-    public $veiw;
-    public $callback;
-    public $footer;
-    public $loader;
-    public $viewerMutant;
-    public $pageDefoult;
+    private $header;
+    private $veiw;
+    private $callback;
+    private $footer;
+    private $loader;
+    private $mutant;
+    private $pageDefoult;
     /////////////////////// FUNCTION GET
-        public function getHeader(){
+        private function getHeader(){
             return $this->header;
         }
-        public function getVeiw()
+        private function getVeiw()
         {
             return $this->veiw;
         }
-        public function getCallback()
+        private function getCallback()
         {
             return $this->callback;
         }
-        public function getFooter(){
+        private function getFooter(){
             return $this->footer;
         }
-        public function getLoader(){
+        private function getLoader(){
             return $this->loader;
         }
-        public function getViewerMutant() {
-            return $this->viewerMutant;
+        private function getMutant() {
+            return $this->mutant;
         }
-        public  function getPageDefoult()
+        private  function getPageDefoult()
         {
             return $this->pageDefoult;
         }
     /////////////////////// FUNCTION SET
-        public function setHeader($header)
+        private function setHeader($header)
         {
             $this->header = $header;
         }
-        public function setVeiw($veiw)
+        private function setVeiw($veiw)
         {
             $this->veiw = $veiw;
         }
-        public function setCallback($callback)
+        private function setCallback($callback)
         {
             $this->callback = $callback;
         }
-        public function setFooter($footer)
+        private function setFooter($footer)
         {
             $this->footer = $footer;
         }
-        public function setLoader($loader){
+        private function setLoader($loader){
             $this->loader = $loader;
         }
-        public function setViewerMutant($viewerMutant){
+        private function setMutant($mutant){
             $string = '';
-            foreach ($viewerMutant as $key => $value) {
-                if (is_array($value)) {
-                    $string .= "$key: " . implode(", ", $value) . ", ";
-                } else {
-                    $string .= "$key: $value, ";
-                }
+            if($mutant == []){
+                $mutant = false;
             }
-
-            $viewerMutant = rtrim($string, ", ");
-            $this->viewerMutant = $viewerMutant;
+            if ($mutant != []) {
+                foreach ($mutant as $key => $value) {
+                    if (is_array($value)) {
+                        $string .= "$key: " . implode(", ", $value) . ", ";
+                    } else {
+                        $string .= "$key: $value, ";
+                    }
+                }
+                $mutant = rtrim($string, ", ");
+            }
+            $this->mutant = $mutant;
         }
-        public function setPageDefoult($pageDefoult)
+        private function setPageDefoult($pageDefoult)
         {
             $this->pageDefoult = $pageDefoult;
         }
@@ -114,72 +118,88 @@ class Viewer
                 $this->viewerWeb();
             }
         }
-        public function viewerConfiguratrion($header,$callback,$footer,$loader,$pageDefoult,$Mutant)
+        public function viewerSettings($header,$callback,$footer,$loader,$pageDefoult,$mutant)
         {
             $this->setLoader($loader);
             $this->setCallback($callback);
             $this->setPageDefoult($pageDefoult);
             $this->setHeader($header);
             $this->setFooter($footer);
+            if($mutant != []){
+                $this->setMutant($mutant);
+            }else {
+                $this->setMutant(false);
+            }
             $this->viewerScreen();
-            $this->setViewerMutant($Mutant);
         }
         public function viewerMutant(){
-            $Mutant = $this->getViewerMutant();
-            $string = "theMutantView: 1, darkMode: mutantVewer: component/darkMode";
-            $parts = explode(", ", $string);// Divide a string
-            $reversedArray = [];
-            foreach ($parts as $part) {
-                $pair = explode(": ", $part, 2);// Divide cada parte em chave
-                if (count($pair) === 2) {
-                    $key = trim($pair[0]);// Remove espaços em branco
-                    $value = trim($pair[1]);
-                    if (is_numeric($value)) {
-                        $value = (int)$value;// Verifica se o valor é numérico e converte-o se necessário
+            $mutant = $this->getMutant();
+            if ($mutant != '' && $mutant != null){
+                if ($mutant == false) {
+                    $mutant = false;
+                }
+                if($mutant){
+                    $string = $mutant;
+                    $parts = explode(", ", $string);// Divide a string
+                    $reversedArray = [];
+                    foreach ($parts as $part) {
+                        $pair = explode(": ", $part, 2);// Divide cada parte em chave
+                        if (count($pair) === 2) {
+                            $key = trim($pair[0]);// Remove espaços em branco
+                            $value = trim($pair[1]);
+                            if (is_numeric($value)) {
+                                $value = (int)$value;// Verifica se o valor é numérico e converte-o se necessário
+                            }
+                            $reversedArray[$key] = $value;// Adiciona o par chave-valor ao array resultante
+                        }// Verifica se o par chave-valor está no formato correto
+                        $mutant = $reversedArray;
                     }
-                    $reversedArray[$key] = $value;// Adiciona o par chave-valor ao array resultante
-                }// Verifica se o par chave-valor está no formato correto
+                }
             }
-            print_r($reversedArray);
-            die();
-            if ($Mutant['theMutantView']) {
-                $countMutant = count($Mutant);
-                $Mutant = $countMutant;
-                $result = $Mutant;
-            }
-            return $result;
+            return $mutant;
         }
         public function viewerWeb() {
-        // Page Defouts
-            $header = $this->getHeader().'.View.php';
-            $view = $this->getVeiw().'.View.php';
-            $footer = $this->getFooter().'.View.php';
-            $loader = $this->getLoader().'.View.php';
-            $maintenance = 'component/maintenance'.'.View.php';
-            $Controller = new Controller;
-            $controllerConfigurationMaintenance = $Controller->ConfigurationViewMaintenance();;
-        // Pages Mutants
-            $Mutant = $this->viewerMutant();
-
-        // Pages Sinkers
-            $menuDesktop = 'component/menuDesktop';
-            $menuMobile = 'component/menuMobile';
-
-            
-            if($controllerConfigurationMaintenance == true){
-                include 'view/'.$header;
-                include 'view/'.$maintenance;
-                die();
-            }
-            die();
-            include 'view/'.$loader;
-            include 'view/'.$header;
-            include 'view/'.$menuDesktop;
-            // for ($i=0; $i <  ; $i++) { 
+            // Page Defouts
+                $header = $this->getHeader().'.View.php';
+                $view = $this->getVeiw().'.View.php';
+                $footer = $this->getFooter().'.View.php';
+                $loader = $this->getLoader().'.View.php';
+                $maintenance = 'component/maintenance'.'.View.php';
+                $Controller = new Controller;
+                $controllerConfigurationMaintenance = $Controller->ConfigurationViewMaintenance();;
+            // Pages Mutants
+                $mutant = $this->viewerMutant();
+            // Pages Sinkers
+                $menuDesktop = 'component/menuDesktop.View.php';
+                $menuMobile = 'component/menuMobile.View.php';
                 
-            // }
-            include 'view/'.$view;
-            include 'view/'.$menuMobile;
-            include 'view/'.$footer;
-    }
+                if($controllerConfigurationMaintenance == true){
+                    include 'view/'.$header;
+                    include 'view/'.$maintenance;
+                    die();
+                }
+                include 'view/'.$loader;
+                include 'view/'.$header;
+                include 'view/'.$menuDesktop;
+                include 'view/'.$view;
+                if(is_array($mutant)){
+                    $arrayMutant = count($mutant);
+                    for ($i=0; $i < $arrayMutant ; $i++) { 
+                        $viewerUrl = 'view/'.$mutant[$i];
+                        if(file_exists($viewerUrl)){
+                            include $viewerUrl;
+                        }else{
+                            echo " 
+                                <section class='pfWeb-erro' id='view'>
+                                    <p class='infErro'></p>
+                                    <p>O Visualizador <span>".$mutant[$i]."'</span>, não foi encontrado na <span>./view/<span>!</p>
+                                </section>
+                            ";
+                        }
+                    }
+                }
+                include 'view/'.$menuMobile;
+                include 'view/'.$footer;
+                die();
+        }
 }

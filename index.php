@@ -1,13 +1,3 @@
-
-<style>
-    @media only screen and (max-width: 425px){
-        body{
-            width: 100%;
-            font-size: .8rem;
-        }
-    }
-</style>
-
 <?php
 
 /*******************************
@@ -37,13 +27,13 @@
 
 
 date_default_timezone_set('America/Sao_Paulo');
-    include 'autoload.php';
+    include 'autoload.Class.php';
     
     // Objeto para configu
     // $ObjViewer = new Viewer('header','home','footer','404/404','loader');
     $Controller = new Controller();
-    
     $Controller->Viewer();
+
     
     
     

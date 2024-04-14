@@ -11,22 +11,19 @@ class Controller
         $result = $Maintenance;
         return $result;
     }
+
     public function Viewer(){
-        $callback = '404/404';
+        $callback = 'error/404';
         $header = 'component/header';
         $footer = 'component/footer';
         $loader = 'component/loader';
-        $Mutant = [
-            'darkMode' => [
-                'url'=>'component/darkMode',
-            ],
-            'menuDefout' => [
-                'url' => 'component/menuDefout'
-            ]
+        $pageDefoult = 'home';
+        $mutant = [
+            // 'component/darkMode.View.php', 
         ];
-        $pageDefoult = 'home';    
         $ObjetoViewer = new Viewer;
-        $ObjetoViewer->viewerConfiguratrion($header,$callback,$footer,$loader,$pageDefoult,$Mutant);
+        $ObjetoViewer->viewerSettings($header,$callback,$footer,$loader,$pageDefoult,$mutant);
+
     }
     public function ConfigurationHomeImage() {
         $perfil = 'image/perfil/perfil.jpg';

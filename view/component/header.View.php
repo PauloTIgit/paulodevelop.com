@@ -13,6 +13,8 @@
             <link rel="icon" type="image/x-icon" href="image/icon/favicon/favicon.ico" sizes="64x64">
         <!--------------------------- fav icon -------------------------->
         <link href="src/app.css" rel="stylesheet"> <!-- ROOT -->
+        <link href="src/darkmode.css" rel="stylesheet"> <!-- DARKMODE -->
+        <link href="src/pfweb.css" rel="stylesheet"> <!-- PFWEB -->
         <link rel="stylesheet" href="view/css/home.css">
         <link rel="stylesheet" href="view/css/about.css">
         <link rel="stylesheet" href="view/css/process.css">
@@ -25,4 +27,8 @@
         <link rel="stylesheet" href="src/mobile.css"> <!-- Resposividade -->
     </head>
     <body>
-    
+        <section class="container-mode">
+            <button onclick="setDarkMode()" id='btnMode' class="default">
+                <i class="" aria-hidden="true" id='iconMode'></i></button>
+        </section>
+        <script src="view/js/darkMode.btn.js"></script>

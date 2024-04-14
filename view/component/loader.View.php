@@ -68,7 +68,7 @@
         width: 100%;
         margin: 0;
         background: #ffff;
-        z-index: 3;
+        z-index: 1000;
         overflow: hidden;
     }
 
