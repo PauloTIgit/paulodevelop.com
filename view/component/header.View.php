@@ -4,16 +4,8 @@
         <title>Paulo Ferreira</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-------------------------- fav icon -------------------------->
-            <link rel="icon" type="image/png" href="image/icon/favicon/android-chrome-512x512.png" sizes="512x512">
-            <link rel="icon" type="image/png" href="image/icon/favicon/android-chrome-192x192.png" sizes="192x192">
-            <link rel="icon" type="image/png" href="image/icon/favicon/favicon-32x32.png">
-            <link rel="icon" type="image/png" href="image/icon/favicon/favicon-16x16.png" sizes="16x16">
-            <link rel="icon" type="image/png" href="image/icon//favicon/apple-touch-icon.png" sizes="32x32">
-            <link rel="icon" type="image/x-icon" href="image/icon/favicon/favicon.ico" sizes="64x64">
-        <!--------------------------- fav icon -------------------------->
         <link href="src/app.css" rel="stylesheet"> <!-- ROOT -->
-        <link href="src/darkmode.css" rel="stylesheet"> <!-- DARKMODE -->
+        <link href="src/modeThemes.css" rel="stylesheet"> <!-- DARKMODE -->
         <link href="src/pfweb.css" rel="stylesheet"> <!-- PFWEB -->
         <link rel="stylesheet" href="view/css/home.css">
         <link rel="stylesheet" href="view/css/about.css">
@@ -27,8 +19,9 @@
         <link rel="stylesheet" href="src/mobile.css"> <!-- Resposividade -->
     </head>
     <body>
-        <section class="container-mode">
+        <script src="https://kit.fontawesome.com/0b3e36b549.js" crossorigin="anonymous"></script><!-- ICON -->
+        <section class="container-mode" id="container_mode">
             <button onclick="setDarkMode()" id='btnMode' class="default">
-                <i class="" aria-hidden="true" id='iconMode'></i></button>
+                <i class="fa" aria-hidden="true" id='iconMode'></i></button>
         </section>
-        <script src="view/js/darkMode.btn.js"></script>
+        <script src="src/modeThemes.btn.js"></script>

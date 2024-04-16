@@ -66,7 +66,7 @@
 
 .container-item{
     width: 16rem;
-    height: 14rem;
+    height: 16rem;
     background: #ffff;
     border-radius: 12px;
     padding: 2rem;
@@ -75,15 +75,15 @@
 
 .container-item i{
     font-size: 2rem;
-    background: var(--cor-pry-100);
-    color: var(--cor-pry-800);
     padding: 1rem 1.2rem;
     border-radius: 6px;
+    background: var(--cor-pry-100);
+    color: var(--cor-pry-800);
 }
 
 .container-item .title-item{
-    padding: 1.8rem 0px 0.7rem 0;
     font-family: var(--font-montserra);
+    padding: 1.8rem 0px 0.7rem 0;
     font-weight: 600;
     font-size: 1.3rem;
     color: var(--cor-grafit-800);

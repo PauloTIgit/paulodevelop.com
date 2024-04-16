@@ -3,10 +3,11 @@
         
         $Controller = new Controller;
         $imagens = $Controller->settingImage();
-
-        $perfil = $imagens['perfil'];
-        $about = $imagens['about'];
-        $portfolioDefault = $imagens['portfolio'];
+        if($imagens != []){
+            $perfil = $imagens['perfil'];
+            $about = $imagens['about'];
+            $portfolioDefault = $imagens['portfolio'];
+        }
         
     ?>
 <main class="view" id="view">
@@ -326,7 +327,7 @@
                         <p class="title">Utilize o formulário abaixo para enviar-me uma mensagem</p>
                     </div>
                     <div class="content-form-contact">
-                        <form action="" method="">
+                        <form action="?send_email=contact" method="POST">
                             <div class="form-contact form-contact-name">
                                 <label for="name" class="form-label">Nome*</label>
                                 <input type="text" class="input name" id="name" name="name" oninput="formatName(this)" required>
@@ -364,7 +365,7 @@
     <!------------------------------------------------ CONTACT --> 
 </main>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>ss -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 <script src="view/js/contact.js"></script>

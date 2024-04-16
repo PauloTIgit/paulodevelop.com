@@ -45,29 +45,26 @@
         --cor-grafit-500: #5f5a5a;
         --cor-grafit-800: #47414d;
         --cor-grafit-1000: #333036;
-        --white-mode-1000: #fffeff;
+        --mode-white-1000: #fffeff;
 
         /** Cores darkMode*/
-        --darkMode-pry-100: #f4dfff;
-        --darkMode-pry-500: #c686fd;
-        --darkMode-pry-800: #A53DFF;
-        --darkMode-pry-1000: #602e8b;
-        --darkMode-seg-100: #e1f3fb;
-        --darkMode-seg-500: #8edbfc;
-        --darkMode-seg-800: #20b5f5;
-        --darkMode-seg-1000: #0588c0;
-        --darkMode-ter-100: #faf7f2;
-        --darkMode-ter-500: #FFEAC8;
-        --darkMode-ter-800: #ffcf83;
-        --darkMode-ter-1000: #faaa2a;
-        --darkMode-qua-800: #2B384C;
-        --darkMode-grafit-50: #F0F1F3;
-        --darkMode-grafit-70: #d6d6d6;
-        --darkMode-grafit-100: #999999;
-        --darkMode-grafit-500: #5f5a5a;
-        --darkMode-grafit-800: #47414d;
-        --darkMode-grafit-1000: #1c1c1c;
-        --dark-mode-1000: #1c1c1c;
+        --mode-dark-pry-100: #cdb1ff;
+        --mode-dark-pry-500: #9864ff;
+        --mode-dark-pry-800: #7c2db7;
+        --mode-dark-pry-1000: #4b1d61;
+        --mode-dark-seg-1000: #036191;
+        --mode-dark-ter-100: #e9e3dc;
+        --mode-dark-ter-500: #e5c3a2;
+        --mode-dark-ter-1000: #b97914;
+        --mode-dark-qua-500: #3a3737;
+        --mode-dark-qua-800: #292323;
+        --mode-dark-grafit-50: #F0F1F3;
+        --mode-dark-grafit-70: #d6d6d6;
+        --mode-dark-grafit-100: #999999;
+        --mode-dark-grafit-500: #5f5a5a;
+        --mode-dark-grafit-800: #47414d;
+        --mode-dark-grafit-1000: #1c1c1c;
+        --mode-dark-1000: #313131;
         /* Fonte */
             --font-montserra: "Montserrat Alternates", sans-serif;
     }

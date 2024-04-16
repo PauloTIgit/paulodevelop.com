@@ -129,11 +129,6 @@
 }
 
 
-
-
-
-
-
 .container-form-contact{
     height: 90%;
     display: flex;
@@ -176,6 +171,7 @@
     outline: none;
     transition: border-bottom-color 0.3s;
     max-width: 542px;
+    background: none;
 }
 
 .form-contact .input:focus {

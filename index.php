@@ -26,24 +26,23 @@
  */
     include 'autoload.Class.php';
     
-    // Variaveis de configuração para o projeto!
-    $server = '192.168.1.2';
-    $port = '1456';
-    $pageMaintenance = false;
-    $callback = 'error/404';
-    $header = 'component/header';
-    $footer = 'component/footer';
-    $loader = 'component/loader';
-    $pageDefoult = 'home';
+    // Configuração para o projeto!
+    $dataSettings = [
+        'pageMaintenance' => 'component/mainteance',
+        'statusMaintenance' => false,
+        'callback' => 'error/404',
+        'header' => 'component/header',
+        'footer' => 'component/footer',
+        'loader' => 'component/loader',
+        'pageDefoult' => 'home',
+        'mutant' => [
+            // 'component/darkMode.View.php',
+        ],
+    ];
 
     $Controller = new Controller;
-    $Controller->settingPages(
-        $callback,
-        $header,
-        $footer,
-        $loader,
-        $pageDefoult
-    );
-    $Controller->settingServer($server,$port,$pageMaintenance);
-    $cleanCockiesServer = $Controller->cleanCockiesServer();
-    $Controller->Viewer();
+    $dadosConfiguracao = $Controller->settingViewers($dataSettings);
+    
+
+
+

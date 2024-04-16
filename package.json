@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "Paulo Ferreira Soluções Tecnológicas.",
   "main": "index.php",
-  "scripts": {
-    "test": "php -S localhost:1456",
-    "start-server": "php -S localhost:1456",
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PauloTIgit/paulodevelop.com.git"
