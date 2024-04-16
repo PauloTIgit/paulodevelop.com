@@ -35,7 +35,6 @@ Contribuições são bem-vindas! Se você encontrar algum problema ou tiver suge
 ## Tasks
 
  - manuMobile: Adicionar a funcionalidade do menu para dispositivos moveis.
- - ThemeMode: Adicionar a funcionalidade do botão darkMode para trocar o layout do projeto.
  - ServiceMail: Adicionar a funcionalidade de enviar emails atraves do phpmailer.
 
 ## Contato
