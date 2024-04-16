@@ -1,6 +1,6 @@
 # Portfolio Profissional
 
-![Logo](insert-your-logo-url-here)
+![Logo](/image/icon/logo.png)
 
 Soluções tecnológicas personalizadas para empresas e indivíduos. Desenvolvimento de software, consultoria em TI e muito mais.
 
