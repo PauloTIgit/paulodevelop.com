@@ -63,13 +63,19 @@ class Controller
             public function settingEmail($nome,$email,$celular,$orcamento,$assunto,$headerEmail)
             {
                 try {
+                    // Definir configurações SMTP
+                    ini_set("SMTP", "smtp.teste.com");
+                    ini_set("smtp_port", "123");
+                    ini_set("smtp_auth", "true");
+                    ini_set("smtp_username", "suporte@paulodevelop.com.br");
+                    ini_set("smtp_password", "teste@123");
                     $nome = $nome;
                     $email = $email;
                     $celular = $celular;
                     $orcamento = $orcamento;
                     $assunto = $assunto;
                     $headerEmail = $headerEmail;
-                    $to =  'pauloferreira@paulodevelop.com.br';
+                    $to =  'suporte@paulodevelop.com.br';
 
                     $mensagemEmail = "
                         <html>
@@ -90,9 +96,10 @@ class Controller
                     
                     $headers ="MIME-Version: 1.0" . "\r\n";
                     $headers .="Content-type:text/html;charset=UTF-8" . "\r\n";
-                    $headers .='From: <pauloferreiradevs@gmail.com>' . "\r\n";
+                    $headers .='From: <pauloferreira@paulodevelop.com.br>' . "\r\n";
 
-                    if(mail($to, $assunto, $mensagemEmail, $headers)){
+                    $sendEmail = mail($to, $assunto, $mensagemEmail, $headers);
+                    if($sendEmail){
                         $result = '200';
                     }else{
                         $result = '500';
