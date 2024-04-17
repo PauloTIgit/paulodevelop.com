@@ -25,8 +25,10 @@ O projeto está estruturado da seguinte forma:
 
 ## Como Usar
 
-1. Faça um clone deste repositório: `git clone https://github.com/seu-usuario/paulo-ferreira-solucoes-tecnologicas.git`
-2. Abra o arquivo `index.html` em um navegador da web para visualizar o site localmente.
+1. Faça um clone deste repositório: `git clone https://github.com/PauloTIgit/paulodevelop.com.git`.
+2. Abra a pasta do projeto: `cd paulodevelop.com`.
+3. Atualize o anbiente do projeto: `npm install`.
+4. Starta o server: `php -S localhost:1456`
 
 ## Contribuindo
 
