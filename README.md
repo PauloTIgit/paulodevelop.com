@@ -34,6 +34,8 @@ P
 Contribuições são bem-vindas! Se você encontrar algum problema ou tiver sugestões de melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
 ## List Tasks
+ - ServiceMail: Adicionar a funcionalidade de enviar emails atraves do phpmailer.
+ - manuMobile: Adicionar a funcionalidade do menu para dispositivos moveis.
  - btnUp: Featcher que a aparece o btn de ir ao inicio após fazer o scroll nas paginas.
 
 ## Contato
