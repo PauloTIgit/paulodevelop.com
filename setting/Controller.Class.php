@@ -46,7 +46,7 @@ class Controller
             {
                 $perfil = 'image/perfil/perfil.jpg';
                 $about = 'image/perfil/about.jpg';
-                $portfolio = 'image/portfolio/default.png';
+                $portfolio = 'image/portfolio/makeflix.png';
                 $coockie = 'image/data/coockie.png';
                 $loading = 'image/loading/loading.gif';
                 $maintenance = 'image/maintenance/manutencao.gif';
@@ -58,6 +58,49 @@ class Controller
                     'loading'       =>      $loading,
                     'maintenance'   =>      $maintenance,
                 ];
+                return $result;
+            }
+            public function settingEmail($nome,$email,$celular,$orcamento,$assunto,$headerEmail)
+            {
+                try {
+                    $nome = $nome;
+                    $email = $email;
+                    $celular = $celular;
+                    $orcamento = $orcamento;
+                    $assunto = $assunto;
+                    $headerEmail = $headerEmail;
+                    $to =  'pauloferreira@paulodevelop.com.br';
+
+                    $mensagemEmail = "
+                        <html>
+                            <head>
+                                <title>Contato do Portfolio</title>
+                            </head>
+                            <body>
+                                <p><b>Nome:</b> $nome</p>
+                                <p><b>E-mail:</b> $email</p>
+                                <p><b>Celular:</b> $celular</p>
+                                <p><b>Orçamento:</b> $orcamento</p>
+                                <p><b>Assunto:</b> $assunto</p>
+                                <p><b>Mensagem:</b></p>
+                                <p>$headerEmail</p>
+                            </body>
+                        </html>
+                    ";
+                    
+                    $headers ="MIME-Version: 1.0" . "\r\n";
+                    $headers .="Content-type:text/html;charset=UTF-8" . "\r\n";
+                    $headers .='From: <pauloferreiradevs@gmail.com>' . "\r\n";
+
+                    if(mail($to, $assunto, $mensagemEmail, $headers)){
+                        $result = '200';
+                    }else{
+                        $result = '500';
+                    }
+                    
+                } catch (\Throwable $th) {
+                    $result = '403';
+                }
                 return $result;
             }
         /////////////////////// METHOD
@@ -79,4 +122,10 @@ class Controller
                 $ClearCacheServer = $ObjCockieServer->clearCache();
                 return $ClearCacheServer;
             }
+        /////////////////////// CONTROLLERS
+            // public function ControllerEmail()
+            // {
+                
+            // }
+            
 }

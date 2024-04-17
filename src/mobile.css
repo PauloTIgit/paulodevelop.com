@@ -4,6 +4,59 @@
     #menu-desktop {
         display: none;
     }
+    #menu-mobile {
+        display: flex;
+        z-index: 800;
+    }
+    
+    #navbar{
+        display: none;
+        transition: transform 0.5s ease;
+    }
+    
+    #navbar.show{
+        display: flex;
+        animation: ShowMenuMobile 2s forwards;
+    }
+
+    @keyframes ShowMenuMobile {
+        0% {
+            bottom: -100px;
+        }s
+
+        80% {
+            bottom: -100px;
+        }
+        100% {
+            bottom: 0;
+        }
+    }
+    #menu-mobile nav .navbar-menu-mobile {
+        width: 100%;
+        height: 9%;
+        background: none;
+        bottom: 0;
+        right:0;
+        border: solid 1px #ffffff4f;
+    }
+    #menu-mobile nav .navbar-menu-mobile li{
+        list-style: none;
+        font-size: 1.5rem;
+    }
+    #menu-mobile .navbar-menu-mobile li a{
+        color: var(--mode-dark-pry-1000);
+    }
+    .linksMenuMobile{
+        border-radius: 6px;
+        padding: .8rem;
+        border: solid 1px var(--mode-dark-pry-1000);
+    }
+    .linksMenuMobile:hover{
+        /* color: var(--cor-pry-800); */
+        color: #f1f9fd;
+        background: var(--cor-pry-800);
+        border: solid 1px #f1f9fd;
+    }
 
     .navbar-menu-mobile {
         width: 425px;
@@ -273,7 +326,7 @@
         height: 100%;
         display: flex;
         justify-content: center;
-        padding-top: 4rem;
+        padding-top: 15rem;
     }
 
     .container-contact .content-contact {
@@ -354,6 +407,33 @@
     /* Menu Mobile */
         #menu-desktop {
             display: none;
+        }
+        #menu-mobile {
+            z-index: 800;
+        }
+        #menu-mobile nav .navbar-menu-mobile {
+            width: 100%;
+            height: 12%;
+            background: none;
+            bottom: 0;
+            right: 0;
+        }
+
+        #menu-mobile nav .navbar-menu-mobile li {
+            list-style: none;
+        }
+
+        #menu-mobile .navbar-menu-mobile li a {
+            border-radius: 6px;
+            padding: .8rem;
+            color: var(--cor-pry-800);
+            font-size: 1.2rem;
+        }
+
+        #menu-mobile .navbar-menu-mobile li a:hover {
+            /* color: var(--cor-pry-800); */
+            color: #f1f9fd;
+            background: var(--cor-pry-800);
         }
         .navbar-menu-mobile{
             width: 425px;
@@ -545,7 +625,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 2.5rem;
+            margin-bottom: 15rem;
         }
         .colun-text-description .title-text{
             font-size: 2rem;
@@ -579,7 +659,7 @@
             height: 100%;
             display: flex;
             justify-content: center;
-            padding-top: 4rem ;
+            padding-top: 10rem ;
         }
         .container-contact .content-contact{
             width: 90%;
@@ -647,6 +727,34 @@
     /* Menu Mobile */
     #menu-desktop {
         display: none;
+    }
+
+    #menu-mobile {
+        z-index: 800;
+    }
+    #menu-mobile nav .navbar-menu-mobile {
+        width: 100%;
+        height: 9%;
+        background: none;
+        bottom: 0;
+        right: 0;
+    }
+
+    #menu-mobile nav .navbar-menu-mobile li {
+        list-style: none;
+    }
+
+    #menu-mobile .navbar-menu-mobile li a {
+        border-radius: 6px;
+        padding: .8rem;
+        color: var(--cor-pry-800);
+        font-size: 1.2rem;
+    }
+
+    #menu-mobile .navbar-menu-mobile li a:hover {
+        /* color: var(--cor-pry-800); */
+        color: #f1f9fd;
+        background: var(--cor-pry-800);
     }
 
     .navbar-menu-mobile {
@@ -874,7 +982,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 2.5rem;
+        margin-bottom: 15rem;
     }
 
     .colun-text-description .title-text {
@@ -1234,7 +1342,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 2.5rem;
+        margin-bottom: 5rem;
     }
 
     .colun-text-description .title-text {

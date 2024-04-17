@@ -78,7 +78,7 @@
 <section class="container-menu" id="menu-desktop">
     <div class="container-logo">
         <div class="imagen">
-            <a href="?app=access">
+            <a href="#home">
                 <img src="image/icon/logo.png" alt="" srcset="">
             </a>
         </div>

@@ -100,9 +100,7 @@
     }
 </style>
 <?php
-    $Controller = new Controller;
-    $imagens = $Controller->settingImage();
-    $loading = $imagens['loading'];
+    $loading = 'image/loading/loading.gif';
 ?>
 
 <section class="container-loader" id="container-loader">

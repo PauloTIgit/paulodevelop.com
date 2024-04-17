@@ -56,6 +56,10 @@ body.mode-white{
         .mode-dark .navbar a{
             color: var(--mode-white-1000);
         }
+        .mode-dark .linksMenuMobile{
+            border: var(--mode-white-1000);
+            color: var(--mode-white-1000);
+        }
     /* HOME */
         .mode-dark .container-home{
             background: var(--mode-dark-1000);

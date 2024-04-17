@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="src/app.css" rel="stylesheet"> <!-- ROOT -->
         <link href="src/modeThemes.css" rel="stylesheet"> <!-- DARKMODE -->
+        <link href="src/goUp.css" rel="stylesheet"> <!-- Go UP -->
         <link href="src/pfweb.css" rel="stylesheet"> <!-- PFWEB -->
         <link rel="stylesheet" href="view/css/home.css">
         <link rel="stylesheet" href="view/css/about.css">
@@ -25,3 +26,9 @@
                 <i class="fa" aria-hidden="true" id='iconMode'></i></button>
         </section>
         <script src="src/modeThemes.btn.js"></script>
+        <section class="container-btnUp" id="container_btnUp">
+            <button onclick="goTop()" class="btnUp" id="btnUp">
+                <i class="fa fa-angle-up" aria-hidden="true" id="angle_up"></i>
+            </button>
+        </section>
+        <script src="src/goUp.btn.js"></script>

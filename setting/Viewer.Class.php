@@ -237,4 +237,5 @@ class Viewer extends Controller
             // gerar log se ter erro informe $result booleam,  $mensagem mensagem do log, $local de onde vem o erro do log;
             $this->gerarLog($result, '_settingDefault_', 'não foi possivel definiar os dados da settingDefault.');
         }
+
 }

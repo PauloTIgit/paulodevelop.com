@@ -139,12 +139,12 @@
                             </div>
                             <div class="container-description-item-portfolio">
                                 <div class="description-item-portfolio">
-                                    <span>UI-UX DESIGN</span>
-                                    <p class="title-item-portfolio">Product Admin Dashboard</p>
-                                    <p class="description-portfolio">Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.</p>
+                                    <span>Software WEB</span>
+                                    <p class="title-item-portfolio">Serviço de Maquiagem</p>
+                                    <p class="description-portfolio">Serviço de maquiagem, plano de assinatura e agendamento online!</p>
                                 </div>
                                 <div class="btn-item-portfolio">
-                                    <a class="btn-portfolio" href="?project=makeflix.renataclara.com">Processos <i class="fa-solid fa-arrow-right"></i></a>
+                                    <!-- <a class="btn-portfolio" href="https://makeflix.renataclara.com">Processos <i class="fa-solid fa-arrow-right"></i></a> -->
                                     <a class="btn-portfolio" href="https://makeflix.renataclara.com" target="_black">Visitar <i class="fa-solid fa-arrow-right"></i></a>
                                 </div>
                             </div>
@@ -314,8 +314,8 @@
                         <a href="https://t.me/pauloferreiradev" target="_blank" class="telegram">
                             <i class="fa fa-telegram" aria-hidden="true"></i>
                         </a>
-                        <a href="https://www.twitch.tv/paulodeveleper" target="_blank" class="twitch">
-                            <i class="fa fa-twitch" aria-hidden="true"></i>
+                        <a href="https://www.linkedin.com/in/paulo-ferreiradevs" target="_blank" class="linkedin">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
                         </a>
                         <a href="https://github.com/PauloTIgit" target="_blank" class="github">
                             <i class="fa fa-github" aria-hidden="true"></i>
@@ -375,3 +375,5 @@
         <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/85836292fd84e940ca15fe2c37336b1a.js"></script> 
     <!-------------------- COOCKIE -->
 </span>
+
+<br><br><br><br>

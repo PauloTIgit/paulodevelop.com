@@ -35,35 +35,40 @@
 </style>
 <section class="container-menu-mobile" id="menu-mobile">
     <nav>
-        <ul class="navbar-menu-mobile">
+        <ul class="navbar-menu-mobile" id="navbar">
+             <li>
+                <a class="link" href="#home">
+                    <i class="fa fa-" aria-hidden="true"></i>
+                </a>
+            </li>
             <li>
                 <a class="link" href="#home">
-                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <i class="linksMenuMobile fa fa-home" aria-hidden="true"></i>
                 </a>
             </li>
             <li>
                 <a class="link" href="#about">
-                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <i class="linksMenuMobile fa fa-user" aria-hidden="true"></i>
                 </a>
             </li>
             <li>
                 <a class="link" href="#process">
-                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                    <i class="linksMenuMobile fa fa-cogs" aria-hidden="true"></i>
                 </a>
             </li>
             <li>
                 <a class="link" href="#my-project">
-                    <i class="fa fa-book" aria-hidden="true"></i>
+                    <i class="linksMenuMobile fa fa-book" aria-hidden="true"></i>
                 </a>
             </li>
             <li>
                 <a class="link" href="#services">
-                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                    <i class="linksMenuMobile fa fa-briefcase" aria-hidden="true"></i>
                 </a>
             </li>
             <li>
                 <a class="link" href="#contact">
-                    <i class="fa fa-id-badge" aria-hidden="true"></i>
+                    <i class="linksMenuMobile fa fa-id-badge" aria-hidden="true"></i>
                 </a>
             </li>
         </ul>

@@ -23,3 +23,22 @@ function scrollToSection(id) {
 function limparCache() {
     location.reload(true);
 }
+
+window.onscroll = function () {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (window.scrollY >= 400) {
+        var navbar = document.getElementById("navbar");
+        if (navbar) {
+            navbar.classList.add("show");
+        }
+    }
+    // if (window.scrollY > 500) {
+    //     var navbar = document.getElementById("navbar");
+    //     if (navbar) {
+    //         navbar.classList.remove("show");
+    //     }
+    // }
+}
