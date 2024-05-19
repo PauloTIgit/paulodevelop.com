@@ -26,14 +26,22 @@ P
 
 ## Como Usar
 
-1. Faça um clone deste repositório: `git clone https://github.com/seu-usuario/paulo-ferreira-solucoes-tecnologicas.git`
-2. Abra o arquivo `index.html` em um navegador da web para visualizar o site localmente.
+1. Faça um clone deste repositório: `git clone https://github.com/PauloTIgit/paulodevelop.com.git`.
+2. Abra a pasta do projeto: `cd paulodevelop.com`.
+3. Atualize o anbiente do projeto: `npm install`.
+4. Starta o server: `php -S localhost:1456`
 
 ## Contribuindo
 
 Contribuições são bem-vindas! Se você encontrar algum problema ou tiver sugestões de melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
+<<<<<<< HEAD
 ## List Tasks
+=======
+## Tasks
+
+ - manuMobile: Adicionar a funcionalidade do menu para dispositivos moveis.
+>>>>>>> 445e8f0e926a89768fb9c6de518acebbbc6ba0f6
  - ServiceMail: Adicionar a funcionalidade de enviar emails atraves do phpmailer.
  - manuMobile: Adicionar a funcionalidade do menu para dispositivos moveis.
  - btnUp: Featcher que a aparece o btn de ir ao inicio após fazer o scroll nas paginas.
