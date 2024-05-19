@@ -35,17 +35,6 @@ P
 
 Contribuições são bem-vindas! Se você encontrar algum problema ou tiver sugestões de melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
-<<<<<<< HEAD
-## List Tasks
-=======
-## Tasks
-
- - manuMobile: Adicionar a funcionalidade do menu para dispositivos moveis.
->>>>>>> 445e8f0e926a89768fb9c6de518acebbbc6ba0f6
- - ServiceMail: Adicionar a funcionalidade de enviar emails atraves do phpmailer.
- - manuMobile: Adicionar a funcionalidade do menu para dispositivos moveis.
- - btnUp: Featcher que a aparece o btn de ir ao inicio após fazer o scroll nas paginas.
-
 ## Contato
 
 - Website: [pauloferreiradev.com.br](https://pauloferreiradev.com.br)
