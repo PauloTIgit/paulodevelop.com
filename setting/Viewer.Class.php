@@ -22,7 +22,7 @@
  * 
  * */
 
-class Viewer extends Controller
+class Viewer 
 {
     /////////////////////// PROTOPIPOS
         private $veiw;
@@ -165,9 +165,13 @@ class Viewer extends Controller
             $menuDesktop = 'view/component/menuDesktop.View.php';
             $menuMobile = 'view/component/menuMobile.View.php';
             $footer = $this->getFooter();
+            // echo $callPage;
             if($callPage === 'page'){
                 $this->viewerWeb();
                 die();
+            }
+            if($callPage === 'pagina'){
+                $this->viewerWeb();
             }else{
                 $view = 'view/'.$callPage.'/'.$page.'.View.php';
                 
@@ -175,7 +179,7 @@ class Viewer extends Controller
             if(!file_exists($view)){
                 $view = $this->getCallback();
             }
-            include $loader;
+            // include $loader;
             include $header;
             include $menuMobile;
             include $view;

@@ -1,25 +1,84 @@
 <?php
+  require "setting/Mail.php";
     $nome = trim(strip_tags(filter_input(INPUT_POST,'name',FILTER_DEFAULT)));
     $email = trim(strip_tags(filter_input(INPUT_POST,'email',FILTER_DEFAULT)));
     $celular = trim(strip_tags(filter_input(INPUT_POST,'phone',FILTER_DEFAULT)));
     $orcamento = trim(strip_tags(filter_input(INPUT_POST, 'budget',FILTER_DEFAULT)));
     $assunto = trim(strip_tags(filter_input(INPUT_POST, 'subject',FILTER_DEFAULT)));
     $headerEmail = trim(strip_tags(filter_input(INPUT_POST, 'message',FILTER_DEFAULT)));
-    $ObjCntroller = new Controller;
-    $settingEmail = $ObjCntroller->settingEmail($nome,$email,$celular,$orcamento,$assunto,$headerEmail);
-    if($settingEmail != '403'){
-        $logMessage =  "Error 403: ao gerar E-mail " . date("Y-m-d H:i:s") . "\n" .$settingEmail . " EMAIL = ".$email . " CONTATO ".$celular." MENSAGEM " . $headerEmail."\n" ;
-        $logPath = "log/view/error_log_Email". date("Y-m-d") . ".txt";
-        file_put_contents($logPath, $logMessage, FILE_APPEND);
-    }elseif($$settingEmail === '500'){
-        $logMessage =  "Error 500: ao enviar E-mail " . date("Y-m-d H:i:s") . "\n" .$settingEmail . " EMAIL = ".$email . " CONTATO ".$celular." MENSAGEM " . $headerEmail."\n" ;
-        $logPath = "log/view/error_log_Email". date("Y-m-d") . ".txt";
-        file_put_contents($logPath, $logMessage, FILE_APPEND);
-    }else{
-        $logMessage =  "Error desconhecido: ao enviar E-mail " . date("Y-m-d H:i:s") . "\n" .$settingEmail . " EMAIL = ".$email . " CONTATO ".$celular." MENSAGEM " . $headerEmail."\n" ;
-        $logPath = "log/view/error_log_Email". date("Y-m-d") . ".txt";
-        file_put_contents($logPath, $logMessage, FILE_APPEND);
-    }
+
+    $message = "<!DOCTYPE html>
+      <html lang='pt-BR'>
+        <head>
+            <meta charset='UTF-8'>
+            <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+            <title>Email HTML</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    background-color: #f4f4f4;
+                    margin: 0;
+                    padding: 0;
+                }
+                .email-container {
+                    max-width: 600px;
+                    margin: 0 auto;
+                    background-color: #ffffff;
+                    padding: 20px;
+                    border: 1px solid #dddddd;
+                }
+                .header {
+                    background-color: #4e4caf;
+                    color: #ffffff;
+                    padding: 10px 0;
+                    text-align: center;
+                }
+                .content {
+                    padding: 20px;
+                    text-align: left;
+                }
+                .footer {
+                    background-color: #f4f4f4;
+                    color: #333333;
+                    padding: 10px 0;
+                    text-align: center;
+                    font-size: 12px;
+                }
+                .button {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    color: #ffffff;
+                    background-color: #4e4caf;
+                    text-decoration: none;
+                    border-radius: 5px;
+                }
+                span{
+                    color: #333333;
+                    font-weight: 600;
+                }
+            </style>
+        </head>
+        <body>
+            <div class='email-container'>
+                <div class='header'>
+                    <h1>Nova mensagem</h1>
+                </div>
+                <div class='content'>
+                    <p>Olá,</p>
+                    <p>Foi enviado uma mensagem pelo site <a href='https://paulodevelop.com.br/'>paulodevelop.com.br</a>!</p>
+                    <br>
+                    <p><span>Nome: </span> ".$nome."</p>
+                    <p><span>E-mail:</span> ".$email."</p>
+                    <p><span>Celular:</span> ". $celular."</p>
+                    <p><span>Orçamento:</span> ".$orcamento."</p>
+                    <p><span>Assunto:</span> ".$assunto."</p>
+                    <p><span>Mensagem:</span> ".$headerEmail."</p>
+                    <br>
+                    <p>Atenciosamente,<br>Equipe do Paulo develop</p>
+                </div>
+                <div class='footer'>
+                    <p>&copy; 2024 Paulo develop. Todos os direitos reservados.</p></div></div></body></html>";
+    enviarEmail($assunto,$message);
 
 ?>
 <style>

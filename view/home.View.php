@@ -375,5 +375,3 @@
         <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/85836292fd84e940ca15fe2c37336b1a.js"></script> 
     <!-------------------- COOCKIE -->
 </span>
-
-<br><br><br><br>
