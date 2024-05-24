@@ -22,7 +22,7 @@
  * 
  * */
 
-class Viewer 
+class Viewer extends Controller
 {
     /////////////////////// PROTOPIPOS
         private $veiw;
