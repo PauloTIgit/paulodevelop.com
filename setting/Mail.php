@@ -26,7 +26,7 @@ function enviarEmail($subject,$message){
         $mail->Username = $username; // Substitua pelo seu e-mail
         $mail->Password = $password; // Substitua pela sua senha
         $mail->SMTPSecure = 'ssl';
-        $mail->Port = $port;
+        $mail->Port = $port; 
 
         // Configurações do e-mail
         $mail->setFrom($username, 'Paulo Develop'); // Substitua pelo seu e-mail e nome
