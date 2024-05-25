@@ -9,9 +9,10 @@ function enviarEmail($subject,$message){
     $subject = 'Nova Mensagem';
     $user_email = 'pauloferreiradevs@gmail.com' ;
     $user_nome = 'Paulo Ferreira';
-    $host = 'smtp.com';
+    $host = 'smtp.hostinger.com';
+    $port = '465';
     $username = 'suporte@paulodevelop.com.br';
-    $password = 'senha';
+    $password = '9BPCnV6Dz^Zg3&D';
 
 
     // Instancie o objeto do PHPMailera
@@ -25,7 +26,7 @@ function enviarEmail($subject,$message){
         $mail->Username = $username; // Substitua pelo seu e-mail
         $mail->Password = $password; // Substitua pela sua senha
         $mail->SMTPSecure = 'ssl';
-        $mail->Port = 444;
+        $mail->Port = $port;
 
         // Configurações do e-mail
         $mail->setFrom($username, 'Paulo Develop'); // Substitua pelo seu e-mail e nome

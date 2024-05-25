@@ -20,7 +20,7 @@ RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Define a página de acordo com o erro
-ErrorDocument 404 "<style>*{padding:0; margin:0;}section{height: 100vh;display: flex;flex-direction: column;justify-content: center;align-items: center;background: #F0F1F3;}title-404{font-family: cursive;display: block;font-weight: 800;font-size: 5rem;color:#F0F1F3;}description-404{font-family: cursive;font-weight: 700;color:#fff;font-size: 1.5rem;}a{color: #00ffde;font-family: cursive;text-decoration: none;}</style> <section ><div style='background:#000;width: 50%;height: 50%;background: #47414d;border-radius: 6px;display: flex;flex-direction: column;justify-content: center;align-items: center;'><title-404>404</title-404><description-404>Como voce parou aqui!</description-404><a href='https://%{HTTP_HOST}/paulodevelop.com'>Voltar</a></div></section>"
+ErrorDocument 404 "<script> window.location = '../?404=404';</script>"
 
 
 # Restringir o acesso a diretórios, apenas os arquivos podem ser acessados
