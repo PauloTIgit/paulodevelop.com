@@ -1,2 +1,4 @@
 setting/Mail.php
-
+.htaccess
+**/logs
+**/vendor/
