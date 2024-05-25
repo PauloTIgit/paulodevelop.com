@@ -132,11 +132,26 @@ class Viewer extends Controller
                 $menuDesktop = 'view/component/menuDesktop.View.php';
                 $menuMobile = 'view/component/menuMobile.View.php';
                 
-                include $loader;
+                $arrayView = explode('/',$view);
+                $arrayView = [
+                    'ROUTE' => $arrayView[0],
+                    'VIEW' => $arrayView[1]
+                ];
+
                 include $header;
-                include $menuDesktop;
-                include $menuMobile;
-                include $view;
+                if($arrayView['ROUTE'] == 'view'){
+                    include $loader;
+                    include $menuDesktop;
+                    // include $menuMobile;
+                }
+
+                if(file_exists($view)){
+                    include $view;
+                }else{
+                    echo 'erro 404';
+                }
+
+
                 if ($mutant != []) {
                     // print_r('array não vazio');
                     $arrayMutant = count($mutant);
@@ -156,33 +171,34 @@ class Viewer extends Controller
                 }else{
                     // print_r('array vazio');
                 }
+
                 include $footer;
         }
-        public function manualPage($callPage, $page)
+        public function manualPage($url, $page)
         {
             $loader = $this->getLoader();
             $header = $this->getHeader();
             $menuDesktop = 'view/component/menuDesktop.View.php';
             $menuMobile = 'view/component/menuMobile.View.php';
             $footer = $this->getFooter();
-            // echo $callPage;
-            if($callPage === 'page'){
-                $this->viewerWeb();
-                die();
-            }
-            if($callPage === 'pagina'){
-                $this->viewerWeb();
+            $page = $page.'.View.php';
+
+            include $header;
+
+            if($url == 'page' || $url == 'pagina' || $url == 'view'){
+                include $loader;
+                include $menuDesktop;
+                $view = "view/$page";
             }else{
-                $view = 'view/'.$callPage.'/'.$page.'.View.php';
-                
+                $view = "view/$url/$page";
             }
+
             if(!file_exists($view)){
                 $view = $this->getCallback();
             }
-            // include $loader;
-            include $header;
-            include $menuMobile;
+
             include $view;
+            include $footer;
             
         }
         public function viewerMutant(){
